@@ -55,6 +55,8 @@ let pan = { x: 0, y: 0 };
 let playing = null;
 let playDirection = 1;
 let drag = null;
+let structurePointers = new Map();
+let pinch = null;
 let chartDrag = null;
 let lastProjectedAtoms = [];
 let polyhedraCache = new WeakMap();
@@ -93,6 +95,13 @@ function unit(vector) {
 function cartesian(fractional, cell) {
   return [0, 1, 2].map((axis) =>
     fractional.reduce((sum, value, vector) => sum + value * cell[vector][axis], 0),
+  );
+}
+
+function fractionalVector(vector, cell) {
+  const inverseCell = inverse3(cell);
+  return [0, 1, 2].map((fractionalAxis) =>
+    vector.reduce((sum, value, cartesianAxis) => sum + value * inverseCell[cartesianAxis][fractionalAxis], 0),
   );
 }
 
@@ -399,11 +408,12 @@ function branchChart(canvas, title, series, selectedIndex) {
 function projectionBasis(cell) {
   const pairs = { ab: [0, 1], bc: [1, 2], ca: [2, 0] };
   const [firstIndex, secondIndex] = pairs[structureView] || [0, 1];
+  const omittedIndex = [0, 1, 2].find((index) => index !== firstIndex && index !== secondIndex);
   const first = cell[firstIndex];
   const second = cell[secondIndex];
   const horizontal = unit(first);
   const vertical = unit(second.map((value, index) => value - dot(second, horizontal) * horizontal[index]));
-  return { horizontal, vertical, depth: unit(cross(horizontal, vertical)), firstIndex, secondIndex };
+  return { horizontal, vertical, depth: unit(cross(horizontal, vertical)), firstIndex, secondIndex, omittedIndex };
 }
 
 function project(point, cell, width, height) {
@@ -411,16 +421,22 @@ function project(point, cell, width, height) {
   const vector = point.map((value, i) => value - center[i]);
   if (structureView !== "3d") {
     const basis = projectionBasis(cell);
-    const horizontalExtent = cell.reduce((sum, vector0) => sum + Math.abs(dot(vector0, basis.horizontal)), 0);
-    const verticalExtent = cell.reduce((sum, vector0) => sum + Math.abs(dot(vector0, basis.vertical)), 0);
+    const fractional = fractionalVector(vector, cell);
+    const depth = fractional[basis.omittedIndex];
+    fractional[basis.omittedIndex] = 0;
+    const planeVector = cartesian(fractional, cell);
+    const horizontalExtent = [basis.firstIndex, basis.secondIndex]
+      .reduce((sum, index) => sum + Math.abs(dot(cell[index], basis.horizontal)), 0);
+    const verticalExtent = [basis.firstIndex, basis.secondIndex]
+      .reduce((sum, index) => sum + Math.abs(dot(cell[index], basis.vertical)), 0);
     const scale = Math.min(
       width * 0.76 / Math.max(horizontalExtent, 1e-8),
       height * 0.72 / Math.max(verticalExtent, 1e-8),
     ) * zoom;
     return {
-      x: width / 2 + pan.x + dot(vector, basis.horizontal) * scale,
-      y: height / 2 + pan.y - dot(vector, basis.vertical) * scale,
-      z: dot(vector, basis.depth),
+      x: width / 2 + pan.x + dot(planeVector, basis.horizontal) * scale,
+      y: height / 2 + pan.y - dot(planeVector, basis.vertical) * scale,
+      z: depth,
       scale,
     };
   }
@@ -977,25 +993,53 @@ function drawBonds(context, frame, viewportCell, width, height, opacity = 1, das
   context.restore();
 }
 
-function drawCellShadow(context, frame, viewportCell, width, height) {
-  const corners = Array.from({ length: 8 }, (_, index) =>
-    project(cartesian([index & 1, (index >> 1) & 1, (index >> 2) & 1], frame.cell), viewportCell, width, height),
-  );
+function projectedCellCorners(frameCell, viewportCell, width, height) {
+  if (structureView === "3d") {
+    return Array.from({ length: 8 }, (_, index) =>
+      project(cartesian([index & 1, (index >> 1) & 1, (index >> 2) & 1], frameCell), viewportCell, width, height),
+    );
+  }
+  const { firstIndex, secondIndex } = projectionBasis(frameCell);
+  const center = [0.5, 0.5, 0.5];
+  return [[0, 0], [1, 0], [1, 1], [0, 1]].map(([first, second]) => {
+    const fractional = [...center];
+    fractional[firstIndex] = first;
+    fractional[secondIndex] = second;
+    return project(cartesian(fractional, frameCell), viewportCell, width, height);
+  });
+}
+
+function drawCellFrame(context, frameCell, viewportCell, width, height, { fill = false, shadow = false } = {}) {
+  const corners = projectedCellCorners(frameCell, viewportCell, width, height);
+  const projected2d = structureView !== "3d";
   context.save();
-  context.strokeStyle = "#38aaa0";
-  context.globalAlpha = 0.3;
+  context.strokeStyle = shadow ? "#38aaa0" : projected2d ? "#338c7380" : "#9babb6";
+  context.fillStyle = "#338c7330";
+  context.globalAlpha = shadow ? 0.3 : 1;
   context.lineWidth = 1.15;
-  context.setLineDash([4, 4]);
-  for (let index = 0; index < 8; index += 1) {
-    for (const bit of [1, 2, 4]) {
-      if (index & bit) continue;
-      context.beginPath();
-      context.moveTo(corners[index].x, corners[index].y);
-      context.lineTo(corners[index | bit].x, corners[index | bit].y);
-      context.stroke();
+  context.setLineDash(shadow ? [4, 4] : []);
+  if (projected2d) {
+    context.beginPath();
+    corners.forEach((point, index) => index ? context.lineTo(point.x, point.y) : context.moveTo(point.x, point.y));
+    context.closePath();
+    if (fill && !shadow) context.fill();
+    context.stroke();
+  } else {
+    for (let index = 0; index < 8; index += 1) {
+      for (const bit of [1, 2, 4]) {
+        if (index & bit) continue;
+        context.beginPath();
+        context.moveTo(corners[index].x, corners[index].y);
+        context.lineTo(corners[index | bit].x, corners[index | bit].y);
+        context.stroke();
+      }
     }
   }
   context.restore();
+}
+
+function drawCellShadow(context, frame, viewportCell, width, height) {
+  drawCellFrame(context, frame.cell, viewportCell, width, height, { shadow: true });
 }
 
 function wrapFractionalPosition(position) {
@@ -1081,38 +1125,7 @@ function drawStructure() {
   const frame = data.frames[frameIndex];
   const { cell, fractional_positions: fractions, symbols } = frame;
   c.clearRect(0, 0, width, height);
-  const corners = Array.from({ length: 8 }, (_, index) =>
-    project(cartesian([index & 1, (index >> 1) & 1, (index >> 2) & 1], cell), cell, width, height),
-  );
-  if ($("cell").checked && structureView !== "3d") {
-    const { firstIndex, secondIndex } = projectionBasis(cell);
-    const center = cartesian([0.5, 0.5, 0.5], cell);
-    const face = [
-      [-1, -1], [1, -1], [1, 1], [-1, 1],
-    ].map(([u, v]) => center.map((value, axis) => value + u * cell[firstIndex][axis] / 2 + v * cell[secondIndex][axis] / 2))
-      .map((point) => project(point, cell, width, height));
-    c.beginPath();
-    face.forEach((point, index) => index ? c.lineTo(point.x, point.y) : c.moveTo(point.x, point.y));
-    c.closePath();
-    c.fillStyle = "#338c7330";
-    c.fill();
-    c.strokeStyle = "#338c7380";
-    c.lineWidth = 1.5;
-    c.stroke();
-  }
-  if ($("cell").checked) {
-    c.strokeStyle = "#9babb6";
-    c.lineWidth = 1.15;
-    for (let index = 0; index < 8; index += 1) {
-      for (const bit of [1, 2, 4]) {
-        if (index & bit) continue;
-        c.beginPath();
-        c.moveTo(corners[index].x, corners[index].y);
-        c.lineTo(corners[index | bit].x, corners[index | bit].y);
-        c.stroke();
-      }
-    }
-  }
+  if ($("cell").checked) drawCellFrame(c, cell, cell, width, height, { fill: true });
   const polarFrame = data.frames[positivePolarFrameIndex()];
   const showPolarShadow = $("motion").checked && frameIndex !== positivePolarFrameIndex() && polarFrame;
   if (showPolarShadow) {
@@ -1221,18 +1234,24 @@ function drawAtomMarker(context, point, symbol, atomScale, opacity = 1) {
 function setStructureView(view) {
   structureView = view;
   pan = { x: 0, y: 0 };
-  zoom = 1;
+  setZoom(1, false);
   const descriptions = {
-    "3d": "Translucent element-colored atoms mark the +P endpoint; matching trajectory lines split at cell faces · Bond and polyhedra toggles apply to both poses · Drag to rotate · Shift-drag to pan",
-    ab: "Translucent element-colored atoms mark the +P endpoint; matching trajectory lines split at cell faces · Bond and polyhedra toggles apply to both poses · Along the ab face normal · drag to pan",
-    bc: "Translucent element-colored atoms mark the +P endpoint; matching trajectory lines split at cell faces · Bond and polyhedra toggles apply to both poses · Along the bc face normal · drag to pan",
-    ca: "Translucent element-colored atoms mark the +P endpoint; matching trajectory lines split at cell faces · Bond and polyhedra toggles apply to both poses · Along the ca face normal · drag to pan",
+    "3d": "Drag to rotate · Shift-drag to pan",
+    ab: "ab face · viewed along c",
+    bc: "bc face · viewed along a",
+    ca: "ca face · viewed along b",
   };
   document.querySelectorAll("[data-structure-view]").forEach((button) => {
     button.setAttribute("aria-pressed", String(button.dataset.structureView === view));
   });
-  $("structure-hint").textContent = `${descriptions[view]} · scroll to zoom · click an atom to inspect its Born effective charge.`;
+  $("structure-hint").textContent = `${descriptions[view]} · scroll, pinch, or use +/− to zoom · click an atom for its Born charge.`;
   drawStructure();
+}
+
+function setZoom(value, redraw = true) {
+  zoom = Math.max(0.55, Math.min(2.6, value));
+  $("zoom-value").textContent = `${Math.round(zoom * 100)}%`;
+  if (redraw) drawStructure();
 }
 
 function tensorTable(matrix, rowLabels = ["x", "y", "z"], columnLabels = ["x", "y", "z"], digits = 4) {
@@ -1271,7 +1290,7 @@ function renderReport() {
   ).join("");
   const coefficients = fit.coefficients_mev_per_atom;
   const fitParameters = Array.isArray(coefficients)
-    ? `<table><tr><th>Coefficient</th>${coefficients.map((_, index) => `<th>c${index}</th>`).join("")}</tr><tr><th>Value (meV/atom)</th>${coefficients.map((value) => `<td>${fmt(value, 5)}</td>`).join("")}</tr></table>`
+    ? `<div class="report-table-scroll" role="region" aria-label="Quartic fit coefficients" tabindex="0"><table><tr><th>Coefficient</th>${coefficients.map((_, index) => `<th>c${index}</th>`).join("")}</tr><tr><th>Value (meV/atom)</th>${coefficients.map((value) => `<td>${fmt(value, 5)}</td>`).join("")}</tr></table></div>`
     : "<p class=muted>Quartic fit is unavailable for this branch.</p>";
   const extrema = (fit.stationary_points || []).length
     ? `<p>Fitted stationary points: ${(fit.stationary_points || []).map((point) => `${point.kind} at q=${fmt(point.q, 3)} (${fmt(point.energy_mev_per_atom_from_endpoint_mean, 3)} meV/atom relative to endpoint mean)`).join(" · ")}</p>`
@@ -1387,11 +1406,13 @@ async function loadQuery(id) {
   frameIndex = positivePolarFrameIndex();
   playDirection = 1;
   selectedAtom = 0;
+  pan = { x: 0, y: 0 };
+  setZoom(1, false);
   const params = new URLSearchParams(location.search);
   params.set("query", id);
   history.replaceState(null, "", `${location.pathname}?${params.toString()}`);
   setSummary();
-  $("structure-hint").textContent = "Translucent element-colored atoms mark the +P endpoint; matching trajectory lines split at cell faces · Bond and polyhedra toggles apply to both poses · Drag to rotate · Shift-drag to pan · scroll to zoom · click an atom to inspect its Born effective charge.";
+  $("structure-hint").textContent = "Drag to rotate · Shift-drag to pan · scroll, pinch, or use +/− to zoom · click an atom for its Born charge.";
   draw();
 }
 
@@ -1438,6 +1459,9 @@ $("atom-size").addEventListener("input", (event) => {
   $("atom-size-value").textContent = `${Number(event.target.value).toFixed(2)}×`;
   drawStructure();
 });
+$("zoom-out").addEventListener("click", () => setZoom(zoom / 1.2));
+$("zoom-in").addEventListener("click", () => setZoom(zoom * 1.2));
+$("zoom-reset").addEventListener("click", () => setZoom(1));
 $("play").addEventListener("click", () => {
   if (playing) {
     clearInterval(playing);
@@ -1472,17 +1496,58 @@ $("download").addEventListener("click", () => {
   URL.revokeObjectURL(anchor.href);
 });
 const structureCanvas = $("structure");
+function beginPinch() {
+  const pointers = Array.from(structurePointers.values()).slice(0, 2);
+  if (pointers.length < 2) return;
+  const center = {
+    x: (pointers[0].x + pointers[1].x) / 2,
+    y: (pointers[0].y + pointers[1].y) / 2,
+  };
+  pinch = {
+    distance: Math.max(1, Math.hypot(pointers[1].x - pointers[0].x, pointers[1].y - pointers[0].y)),
+    zoom,
+    pan: { ...pan },
+    center,
+  };
+  drag = null;
+}
 structureCanvas.addEventListener("pointerdown", (event) => {
+  if (event.pointerType === "mouse" && event.button !== 0) return;
+  structurePointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+  structureCanvas.setPointerCapture(event.pointerId);
+  if (structurePointers.size > 1) {
+    beginPinch();
+    return;
+  }
   drag = {
+    pointerId: event.pointerId,
     x: event.clientX,
     y: event.clientY,
     moved: false,
     pan: structureView !== "3d" || event.shiftKey,
   };
-  structureCanvas.setPointerCapture(event.pointerId);
 });
 structureCanvas.addEventListener("pointermove", (event) => {
-  if (!drag) return;
+  const pointer = structurePointers.get(event.pointerId);
+  if (!pointer) return;
+  pointer.x = event.clientX;
+  pointer.y = event.clientY;
+  if (structurePointers.size > 1) {
+    if (!pinch) beginPinch();
+    const pointers = Array.from(structurePointers.values()).slice(0, 2);
+    const center = {
+      x: (pointers[0].x + pointers[1].x) / 2,
+      y: (pointers[0].y + pointers[1].y) / 2,
+    };
+    const distance = Math.max(1, Math.hypot(pointers[1].x - pointers[0].x, pointers[1].y - pointers[0].y));
+    zoom = Math.max(0.55, Math.min(2.6, pinch.zoom * distance / pinch.distance));
+    pan.x = pinch.pan.x + center.x - pinch.center.x;
+    pan.y = pinch.pan.y + center.y - pinch.center.y;
+    $("zoom-value").textContent = `${Math.round(zoom * 100)}%`;
+    drawStructure();
+    return;
+  }
+  if (!drag || drag.pointerId !== event.pointerId) return;
   const dx = event.clientX - drag.x;
   const dy = event.clientY - drag.y;
   if (Math.abs(dx) + Math.abs(dy) > 2) drag.moved = true;
@@ -1497,8 +1562,22 @@ structureCanvas.addEventListener("pointermove", (event) => {
   drag.y = event.clientY;
   drawStructure();
 });
-structureCanvas.addEventListener("pointerup", (event) => {
-  if (drag && !drag.moved && lastProjectedAtoms.length) {
+function finishStructurePointer(event, allowClick) {
+  if (!structurePointers.has(event.pointerId)) return;
+  const wasPinching = Boolean(pinch);
+  const shouldSelectAtom = allowClick && !wasPinching && drag?.pointerId === event.pointerId && !drag.moved;
+  structurePointers.delete(event.pointerId);
+  if (structurePointers.size > 1) {
+    beginPinch();
+  } else if (structurePointers.size === 1) {
+    const [pointerId, pointer] = Array.from(structurePointers.entries())[0];
+    drag = { pointerId, x: pointer.x, y: pointer.y, moved: true, pan: structureView !== "3d" };
+    pinch = null;
+  } else {
+    drag = null;
+    pinch = null;
+  }
+  if (shouldSelectAtom && lastProjectedAtoms.length) {
     const bounds = structureCanvas.getBoundingClientRect();
     const x = event.clientX - bounds.left;
     const y = event.clientY - bounds.top;
@@ -1510,13 +1589,13 @@ structureCanvas.addEventListener("pointerup", (event) => {
     });
     if (closest >= 0) { selectedAtom = closest; draw(); }
   }
-  drag = null;
-});
-structureCanvas.addEventListener("pointercancel", () => { drag = null; });
+}
+structureCanvas.addEventListener("pointerup", (event) => finishStructurePointer(event, true));
+structureCanvas.addEventListener("pointercancel", (event) => finishStructurePointer(event, false));
+structureCanvas.addEventListener("lostpointercapture", (event) => finishStructurePointer(event, false));
 structureCanvas.addEventListener("wheel", (event) => {
   event.preventDefault();
-  zoom = Math.max(0.55, Math.min(2.6, zoom * Math.exp(-event.deltaY * 0.001)));
-  drawStructure();
+  setZoom(zoom * Math.exp(-event.deltaY * 0.001));
 }, { passive: false });
 window.addEventListener("resize", draw);
 load();
