@@ -67,6 +67,12 @@ const software = [
     text: "Path-integral quantum Monte Carlo code for polarons, developed alongside broader path-integral work in the Frost group.",
     links: [{ label: "Repository", href: "https://github.com/Frost-group/PolaronQMC.jl" }],
   },
+  {
+    name: "FerroFinder",
+    kind: "Interactive materials explorer",
+    text: "Browse 765 model-inferred polarization branches from the MP-Ferroelectric and MP-Ferroelectric-Ext campaigns, with energy and polarization plots, structure views, and per-image response properties.",
+    links: [{ label: "Open the explorer", href: "/mp-ferroelectrics/" }],
+  },
 ];
 
 const teaching = [
@@ -197,6 +203,7 @@ export default function Home() {
         <nav aria-label="Primary navigation">
           <a href="#research">Research</a>
           <a href="#software">Software</a>
+          <a href="/mp-ferroelectrics/">FerroFinder</a>
           <a href="#teaching">Teaching</a>
           <a href="#publications">Publications</a>
           <a href="#contact">Contact</a>

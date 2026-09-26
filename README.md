@@ -1,8 +1,13 @@
-# vinext-starter
+# Bradley Martin's website
 
-A clean full-stack starter running on
-[vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
-Drizzle support.
+Personal academic website built with Next.js and React. GitHub Pages publishes
+the static export through [`.github/workflows/pages.yml`](.github/workflows/pages.yml)
+when changes reach `main`; the build writes the site to `out/` with
+`npm run build:pages`. The combined MP-Ferroelectric and MP-Ferroelectric-Ext
+explorer is available at `/mp-ferroelectrics/`.
+
+This checkout also retains a Vinext and Cloudflare Sites workflow with optional
+D1 and Drizzle support, documented below.
 
 ## Prerequisites
 
@@ -29,6 +34,14 @@ Scripts that need writable project-scoped home, npm, XDG, and temporary paths us
 - `db/schema.ts` starts intentionally empty
 - `examples/d1/` contains an optional D1 example surface
 - `drizzle.config.ts` supports local migration generation when needed
+
+## MP Ferroelectrics Explorer
+
+The combined MP-Ferroelectric and MP-Ferroelectric-Ext explorer is served at
+`/mp-ferroelectrics/` from `public/mp-ferroelectrics/`. Its self-contained
+static files include the interactive index, branch visualizer, and result
+payloads. To refresh it, replace that directory with the contents of the
+FerroFinder screening export and rebuild with `npm run build:pages`.
 
 ## Workspace Auth Headers
 

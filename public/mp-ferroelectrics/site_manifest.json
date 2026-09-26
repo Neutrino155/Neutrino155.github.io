@@ -1,0 +1,48 @@
+{
+  "schema": "ferrofinder.github_pages_site.v1",
+  "run_status": "partial",
+  "material_input_count": 766,
+  "completed_count": 765,
+  "no_branch_count": 0,
+  "error_count": 0,
+  "skipped_count": 1,
+  "explorer_branch_count": 765,
+  "extensions": 0.35,
+  "extension_images_per_side": 4,
+  "skipped_materials": [
+    {
+      "query_id": "query_0739",
+      "formula": "H64Be8F32N16",
+      "atom_count": 120,
+      "reason": "Skipped after the user-requested 10-minute completion window; this 120-atom structure remained active beyond that window."
+    }
+  ],
+  "collections": [
+    {
+      "name": "mp-ferroelectric",
+      "source": "screenings/mp_ferroelectric_250/data/blind_v1/model_inputs/inputs",
+      "source_file_count": 250,
+      "copied_file_count": 250,
+      "omitted_files": []
+    },
+    {
+      "name": "mp-ferroelectric-ext",
+      "source": "screenings/ferroelectrics_ext_ricci/data/blind_inputs/inputs",
+      "source_file_count": 517,
+      "copied_file_count": 516,
+      "omitted_files": [
+        "query_0421.cif"
+      ]
+    }
+  ],
+  "excluded_inputs": [
+    {
+      "collection": "mp-ferroelectric-ext",
+      "source": "screenings/ferroelectrics_ext_ricci/data/blind_inputs/inputs/query_0421.cif",
+      "filename": "query_0421.cif",
+      "reason": "User requested omitting the 108-atom structure"
+    }
+  ],
+  "validation_identifiers_included": false,
+  "source_structures_included": false
+}

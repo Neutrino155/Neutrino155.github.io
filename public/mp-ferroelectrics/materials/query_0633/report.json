@@ -1,0 +1,3506 @@
+{
+  "schema": "ferrofinder.endpoint_parent_recovery.v4_variable_cell",
+  "status": "complete",
+  "input_atom_count": 40,
+  "input_formula": "O24Pb8Zr8",
+  "input_spacegroup": "Pba2",
+  "input_pointgroup": "mm2",
+  "input_is_polar_point_group": true,
+  "input_energy_eV": -305.4711989247512,
+  "input_cartesian_polarization_e_A2": [
+    -3.008045366364953e-12,
+    1.0762798808456214e-10,
+    -0.014721252499419591
+  ],
+  "input_reduced_polarization": [
+    -3.022002341832811e-10,
+    5.466004323611549e-09,
+    -1.0665110327446579
+  ],
+  "input_formal_targets": [
+    {
+      "orbit_id": 0,
+      "representative_formal_class": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "target_reduced_polarization": [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    },
+    {
+      "orbit_id": 1,
+      "representative_formal_class": [
+        0.0,
+        0.0,
+        0.5
+      ],
+      "target_reduced_polarization": [
+        0.0,
+        0.0,
+        -1.5
+      ]
+    },
+    {
+      "orbit_id": 2,
+      "representative_formal_class": [
+        0.0,
+        0.5,
+        0.0
+      ],
+      "target_reduced_polarization": [
+        0.0,
+        0.5,
+        -1.0
+      ]
+    },
+    {
+      "orbit_id": 3,
+      "representative_formal_class": [
+        0.5,
+        0.0,
+        0.0
+      ],
+      "target_reduced_polarization": [
+        -0.5,
+        0.0,
+        -1.0
+      ]
+    },
+    {
+      "orbit_id": 4,
+      "representative_formal_class": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "target_reduced_polarization": [
+        0.0,
+        0.5,
+        -1.5
+      ]
+    },
+    {
+      "orbit_id": 5,
+      "representative_formal_class": [
+        0.5,
+        0.0,
+        0.5
+      ],
+      "target_reduced_polarization": [
+        -0.5,
+        0.0,
+        -1.5
+      ]
+    },
+    {
+      "orbit_id": 6,
+      "representative_formal_class": [
+        0.5,
+        0.5,
+        0.0
+      ],
+      "target_reduced_polarization": [
+        -0.5,
+        0.5,
+        -1.0
+      ]
+    },
+    {
+      "orbit_id": 7,
+      "representative_formal_class": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "target_reduced_polarization": [
+        -0.5,
+        0.5,
+        -1.5
+      ]
+    }
+  ],
+  "parent_candidates": [
+    {
+      "candidate_id": "inversion_parent_endpoint_00",
+      "source": "same_species_inversion_center_projection_from_endpoint",
+      "spacegroup": "Pbam",
+      "spacegroup_number": 55,
+      "pointgroup": "mmm",
+      "has_inversion": true,
+      "is_polar_point_group": false,
+      "nonpolar_parent_hypothesis": true,
+      "symmetry_tolerance_A": null,
+      "target_reduced_polarization": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "formal_class": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "target_residual": 2.6115724273721764e-15,
+      "parent_symmetrization_rmsd_A": 0.08959236321924093,
+      "parent_cell_rmsd_A": 0.0,
+      "energy_eV": -305.60949874447147,
+      "reduced_polarization": [
+        -2.27315009142182e-15,
+        1.024211516383796e-15,
+        -7.772322529246834e-16
+      ],
+      "cartesian_polarization_e_A2": [
+        -2.2626516547986727e-17,
+        2.0167167524044654e-17,
+        -1.0728283060093197e-17
+      ],
+      "ranking_score": 0.08959236321924614
+    },
+    {
+      "candidate_id": "symmetry_projection_00",
+      "source": "spglib_refine_cell_from_polar_endpoint",
+      "spacegroup": "Pbam",
+      "spacegroup_number": 55,
+      "pointgroup": "mmm",
+      "has_inversion": true,
+      "is_polar_point_group": false,
+      "nonpolar_parent_hypothesis": true,
+      "symmetry_tolerance_A": null,
+      "target_reduced_polarization": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "formal_class": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "target_residual": 5.857230030195408e-15,
+      "parent_symmetrization_rmsd_A": 0.11347753227500251,
+      "parent_cell_rmsd_A": 0.0,
+      "energy_eV": -304.8944460716185,
+      "reduced_polarization": [
+        -4.545689354736593e-15,
+        2.3046710406173762e-15,
+        -2.850954051153519e-15
+      ],
+      "cartesian_polarization_e_A2": [
+        -4.524695302571139e-17,
+        4.5379969098617605e-17,
+        -3.935225530978866e-17
+      ],
+      "ranking_score": 0.11347753227501423
+    },
+    {
+      "candidate_id": "bec_projection_00",
+      "source": "MACEField_BEC_backprojection",
+      "spacegroup": "Pba2",
+      "spacegroup_number": 32,
+      "pointgroup": "mm2",
+      "has_inversion": false,
+      "is_polar_point_group": true,
+      "nonpolar_parent_hypothesis": false,
+      "symmetry_tolerance_A": null,
+      "target_reduced_polarization": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "formal_class": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "target_residual": 0.00013063525888190597,
+      "parent_symmetrization_rmsd_A": 0.005835765128478815,
+      "parent_cell_rmsd_A": 0.003593156761338317,
+      "energy_eV": -305.4540654790975,
+      "reduced_polarization": [
+        -1.3954525209708996e-13,
+        -2.030071809385792e-12,
+        -1.000130635258882
+      ],
+      "cartesian_polarization_e_A2": [
+        -1.9980129483035893e-14,
+        4.3293467550116586e-13,
+        -0.013803162263824182
+      ],
+      "ranking_score": 0.5069953248365772
+    },
+    {
+      "candidate_id": "inversion_parent_bec_00_00",
+      "source": "same_species_inversion_center_projection_after_BEC",
+      "spacegroup": "Pbam",
+      "spacegroup_number": 55,
+      "pointgroup": "mmm",
+      "has_inversion": true,
+      "is_polar_point_group": false,
+      "nonpolar_parent_hypothesis": true,
+      "symmetry_tolerance_A": null,
+      "target_reduced_polarization": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "formal_class": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "target_residual": 2.5121644271138042e-15,
+      "parent_symmetrization_rmsd_A": 0.08959261345984251,
+      "parent_cell_rmsd_A": 0.003593156761338317,
+      "energy_eV": -305.59324409030665,
+      "reduced_polarization": [
+        -2.2753973305842433e-15,
+        -8.305437000178305e-16,
+        5.858491552444031e-16
+      ],
+      "cartesian_polarization_e_A2": [
+        -2.2631332841259632e-17,
+        -1.6342937319325645e-17,
+        8.085514699186653e-18
+      ],
+      "ranking_score": 0.09049090265018211
+    },
+    {
+      "candidate_id": "symmetry_parent_00_00",
+      "source": "spglib_refine_cell_after_MACEField_BEC_backprojection",
+      "spacegroup": "Pbam",
+      "spacegroup_number": 55,
+      "pointgroup": "mmm",
+      "has_inversion": true,
+      "is_polar_point_group": false,
+      "nonpolar_parent_hypothesis": true,
+      "symmetry_tolerance_A": null,
+      "target_reduced_polarization": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "formal_class": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "target_residual": 1.6725835367450315e-15,
+      "parent_symmetrization_rmsd_A": 0.11127946974856882,
+      "parent_cell_rmsd_A": 0.003593156761337556,
+      "energy_eV": -304.9523762049505,
+      "reduced_polarization": [
+        -1.218884969747038e-15,
+        -7.231833880104469e-16,
+        9.072812023984419e-16
+      ],
+      "cartesian_polarization_e_A2": [
+        -1.2123153646524044e-17,
+        -1.4230365940016375e-17,
+        1.2521713878289068e-17
+      ],
+      "ranking_score": 0.11217775893890655
+    },
+    {
+      "candidate_id": "bec_projection_01",
+      "source": "MACEField_BEC_backprojection",
+      "spacegroup": "Pba2",
+      "spacegroup_number": 32,
+      "pointgroup": "mm2",
+      "has_inversion": false,
+      "is_polar_point_group": true,
+      "nonpolar_parent_hypothesis": false,
+      "symmetry_tolerance_A": null,
+      "target_reduced_polarization": [
+        0.0,
+        0.0,
+        -1.5
+      ],
+      "formal_class": [
+        0.0,
+        0.0,
+        0.5
+      ],
+      "target_residual": 4.0533280655896675e-05,
+      "parent_symmetrization_rmsd_A": 0.03779979366437754,
+      "parent_cell_rmsd_A": 0.023061504281012817,
+      "energy_eV": -305.4658834568678,
+      "reduced_polarization": [
+        -3.029321479859091e-15,
+        -1.9641673099447142e-14,
+        -1.499959466719344
+      ],
+      "cartesian_polarization_e_A2": [
+        9.176817387608372e-14,
+        1.0034882576955862e-12,
+        -0.020721914905071866
+      ],
+      "ranking_score": 0.5436462362959426
+    },
+    {
+      "candidate_id": "bec_projection_02",
+      "source": "MACEField_BEC_backprojection",
+      "spacegroup": "Pc",
+      "spacegroup_number": 7,
+      "pointgroup": "m",
+      "has_inversion": false,
+      "is_polar_point_group": true,
+      "nonpolar_parent_hypothesis": false,
+      "symmetry_tolerance_A": null,
+      "target_reduced_polarization": [
+        0.0,
+        0.5,
+        -1.0
+      ],
+      "formal_class": [
+        0.0,
+        0.5,
+        0.0
+      ],
+      "target_residual": 7.483063281389474e-06,
+      "parent_symmetrization_rmsd_A": 0.06480804569972784,
+      "parent_cell_rmsd_A": 0.03472505755383912,
+      "energy_eV": -305.2600015880337,
+      "reduced_polarization": [
+        1.3526301215767528e-13,
+        0.5000000818495808,
+        -0.9999925173843665
+      ],
+      "cartesian_polarization_e_A2": [
+        -8.365181373638974e-14,
+        0.009793220174394542,
+        -0.013768676803686306
+      ],
+      "ranking_score": 0.5735042762147504
+    },
+    {
+      "candidate_id": "symmetry_parent_02_00",
+      "source": "spglib_refine_cell_after_MACEField_BEC_backprojection",
+      "spacegroup": "Pbam",
+      "spacegroup_number": 55,
+      "pointgroup": "mmm",
+      "has_inversion": true,
+      "is_polar_point_group": false,
+      "nonpolar_parent_hypothesis": true,
+      "symmetry_tolerance_A": null,
+      "target_reduced_polarization": [
+        0.0,
+        0.5,
+        -1.0
+      ],
+      "formal_class": [
+        0.0,
+        0.5,
+        0.0
+      ],
+      "target_residual": 0.49999999999999845,
+      "parent_symmetrization_rmsd_A": 2.1242298507164916,
+      "parent_cell_rmsd_A": 0.0034603762218843345,
+      "energy_eV": -304.8684776824961,
+      "reduced_polarization": [
+        -7.01731650259773e-16,
+        -1.5494530600610853e-15,
+        1.5534977570458292e-16
+      ],
+      "cartesian_polarization_e_A2": [
+        -6.97968357073768e-18,
+        -3.0490147732137835e-17,
+        2.1440323599476273e-18
+      ],
+      "ranking_score": 3.1250949447719596
+    },
+    {
+      "candidate_id": "bec_projection_03",
+      "source": "MACEField_BEC_backprojection",
+      "spacegroup": "Pc",
+      "spacegroup_number": 7,
+      "pointgroup": "m",
+      "has_inversion": false,
+      "is_polar_point_group": true,
+      "nonpolar_parent_hypothesis": false,
+      "symmetry_tolerance_A": null,
+      "target_reduced_polarization": [
+        -0.5,
+        0.0,
+        -1.0
+      ],
+      "formal_class": [
+        0.5,
+        0.0,
+        0.0
+      ],
+      "target_residual": 1.7982436154305815e-06,
+      "parent_symmetrization_rmsd_A": 0.03335370397142991,
+      "parent_cell_rmsd_A": 0.006072350200046836,
+      "energy_eV": -305.40488377858617,
+      "reduced_polarization": [
+        -0.4999992304271514,
+        3.096504661059169e-14,
+        -0.9999983747499481
+      ],
+      "cartesian_polarization_e_A2": [
+        -0.004960124196443884,
+        2.89488595800535e-13,
+        -0.013796691774631406
+      ],
+      "ranking_score": 0.5348753880086725
+    },
+    {
+      "candidate_id": "symmetry_parent_03_00",
+      "source": "spglib_refine_cell_after_MACEField_BEC_backprojection",
+      "spacegroup": "Pbam",
+      "spacegroup_number": 55,
+      "pointgroup": "mmm",
+      "has_inversion": true,
+      "is_polar_point_group": false,
+      "nonpolar_parent_hypothesis": true,
+      "symmetry_tolerance_A": null,
+      "target_reduced_polarization": [
+        -0.5,
+        0.0,
+        -1.0
+      ],
+      "formal_class": [
+        0.5,
+        0.0,
+        0.0
+      ],
+      "target_residual": 0.49999999999999994,
+      "parent_symmetrization_rmsd_A": 2.0117072397019733,
+      "parent_cell_rmsd_A": 0.003535290721501394,
+      "energy_eV": -304.9781751069497,
+      "reduced_polarization": [
+        -5.482541627290168e-17,
+        -1.555483432958137e-15,
+        -1.6195716192855527e-16
+      ],
+      "cartesian_polarization_e_A2": [
+        -5.453059801207177e-19,
+        -3.060815968335925e-17,
+        -2.2352321239867673e-18
+      ],
+      "ranking_score": 3.0125910623823486
+    },
+    {
+      "candidate_id": "bec_projection_04",
+      "source": "MACEField_BEC_backprojection",
+      "spacegroup": "Pc",
+      "spacegroup_number": 7,
+      "pointgroup": "m",
+      "has_inversion": false,
+      "is_polar_point_group": true,
+      "nonpolar_parent_hypothesis": false,
+      "symmetry_tolerance_A": null,
+      "target_reduced_polarization": [
+        0.0,
+        0.5,
+        -1.5
+      ],
+      "formal_class": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "target_residual": 2.1137418513846515e-05,
+      "parent_symmetrization_rmsd_A": 0.07573165009858297,
+      "parent_cell_rmsd_A": 0.04169922220570459,
+      "energy_eV": -305.25350994177325,
+      "reduced_polarization": [
+        1.8150418174934476e-13,
+        0.5000013945038971,
+        -1.500021091368384
+      ],
+      "cartesian_polarization_e_A2": [
+        1.609403770347753e-15,
+        0.009818703465433603,
+        -0.020690164475330557
+      ],
+      "ranking_score": 0.5861987304870369
+    },
+    {
+      "candidate_id": "bec_projection_05",
+      "source": "MACEField_BEC_backprojection",
+      "spacegroup": "Pc",
+      "spacegroup_number": 7,
+      "pointgroup": "m",
+      "has_inversion": false,
+      "is_polar_point_group": true,
+      "nonpolar_parent_hypothesis": false,
+      "symmetry_tolerance_A": null,
+      "target_reduced_polarization": [
+        -0.5,
+        0.0,
+        -1.5
+      ],
+      "formal_class": [
+        0.5,
+        0.0,
+        0.5
+      ],
+      "target_residual": 2.3395030766777434e-05,
+      "parent_symmetrization_rmsd_A": 0.05045649035255941,
+      "parent_cell_rmsd_A": 0.02369767992332559,
+      "energy_eV": -305.41224500012765,
+      "reduced_polarization": [
+        -0.5000018619619518,
+        1.8986838572551135e-13,
+        -1.499976679181784
+      ],
+      "cartesian_polarization_e_A2": [
+        -0.004982287514597211,
+        8.198297522407244e-13,
+        -0.020717515833658773
+      ],
+      "ranking_score": 0.5564277003949244
+    },
+    {
+      "candidate_id": "bec_projection_06",
+      "source": "MACEField_BEC_backprojection",
+      "spacegroup": "P1",
+      "spacegroup_number": 1,
+      "pointgroup": "1",
+      "has_inversion": false,
+      "is_polar_point_group": true,
+      "nonpolar_parent_hypothesis": false,
+      "symmetry_tolerance_A": null,
+      "target_reduced_polarization": [
+        -0.5,
+        0.5,
+        -1.0
+      ],
+      "formal_class": [
+        0.5,
+        0.5,
+        0.0
+      ],
+      "target_residual": 1.0939042537017555e-05,
+      "parent_symmetrization_rmsd_A": 0.0728476246632793,
+      "parent_cell_rmsd_A": 0.03513520494120621,
+      "energy_eV": -305.19721056694976,
+      "reduced_polarization": [
+        -0.4999964182501397,
+        0.5000000699439732,
+        -0.9999896641968186
+      ],
+      "cartesian_polarization_e_A2": [
+        -0.004960281323384663,
+        0.009793273203969105,
+        -0.013763905685767417
+      ],
+      "ranking_score": 0.5816533039836549
+    },
+    {
+      "candidate_id": "bec_projection_07",
+      "source": "MACEField_BEC_backprojection",
+      "spacegroup": "P1",
+      "spacegroup_number": 1,
+      "pointgroup": "1",
+      "has_inversion": false,
+      "is_polar_point_group": true,
+      "nonpolar_parent_hypothesis": false,
+      "symmetry_tolerance_A": null,
+      "target_reduced_polarization": [
+        -0.5,
+        0.5,
+        -1.5
+      ],
+      "formal_class": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "target_residual": 3.895621043606661e-05,
+      "parent_symmetrization_rmsd_A": 0.08294992407739096,
+      "parent_cell_rmsd_A": 0.04211523038082715,
+      "energy_eV": -305.1862006899544,
+      "reduced_polarization": [
+        -0.4999930888150835,
+        0.5000008187164285,
+        -1.500038329512885
+      ],
+      "cartesian_polarization_e_A2": [
+        -0.0049825365223040525,
+        0.009818786184230136,
+        -0.02068567302693775
+      ],
+      "ranking_score": 0.5935566440934699
+    }
+  ],
+  "formal_branches": [
+    {
+      "orbit_id": 0,
+      "formal_class": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "formal_classes_in_orbit": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "target_reduced_polarization": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "bec_backprojection": {
+        "converged_to_target": true,
+        "history": [
+          {
+            "iteration": 0,
+            "reduced_polarization": [
+              -3.022002341832811e-10,
+              5.466004323611549e-09,
+              -1.0665110327446579
+            ],
+            "branch_aligned_reduced_polarization": [
+              -3.022002341832811e-10,
+              5.466004323611549e-09,
+              -1.0665110327446579
+            ],
+            "target_residual": 0.06651103274465808,
+            "energy_eV": -305.4711989247512,
+            "max_atomic_step_A": 0.0048294027197021555,
+            "max_log_strain_component": 0.00065252453697702,
+            "step_scale": 1.0,
+            "strain_jacobian_refreshed": false,
+            "strain_jacobian_frobenius_norm": 2.737626096568256,
+            "cell_principal_stretches": [
+              1.0006527374774268,
+              1.0001227580430272,
+              1.0000097550671168
+            ],
+            "cell_volume_ratio": 1.0007853382821383,
+            "cell_rmsd_from_input_A": 0.003593156761338317
+          },
+          {
+            "iteration": 1,
+            "reduced_polarization": [
+              -1.3954525209708996e-13,
+              -2.030071809385792e-12,
+              -1.000130635258882
+            ],
+            "branch_aligned_reduced_polarization": [
+              -1.3954525209708996e-13,
+              -2.030071809385792e-12,
+              -1.000130635258882
+            ],
+            "target_residual": 0.00013063525888190597,
+            "energy_eV": -305.4540654790975
+          }
+        ],
+        "iterations": 1
+      },
+      "parent": {
+        "candidate_id": "inversion_parent_endpoint_00",
+        "source": "same_species_inversion_center_projection_from_endpoint",
+        "spacegroup": "Pbam",
+        "spacegroup_number": 55,
+        "pointgroup": "mmm",
+        "has_inversion": true,
+        "is_polar_point_group": false,
+        "nonpolar_parent_hypothesis": true,
+        "symmetry_tolerance_A": null,
+        "target_reduced_polarization": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "formal_class": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "target_residual": 2.6115724273721764e-15,
+        "parent_symmetrization_rmsd_A": 0.08959236321924093,
+        "parent_cell_rmsd_A": 0.0,
+        "energy_eV": -305.60949874447147,
+        "reduced_polarization": [
+          -2.27315009142182e-15,
+          1.024211516383796e-15,
+          -7.772322529246834e-16
+        ],
+        "cartesian_polarization_e_A2": [
+          -2.2626516547986727e-17,
+          2.0167167524044654e-17,
+          -1.0728283060093197e-17
+        ],
+        "ranking_score": 0.08959236321924614
+      },
+      "branch_status": "sampled",
+      "incoming": {
+        "reached": true,
+        "construction": "variable_cell_linear_interpolation",
+        "continuation_fractions": [
+          0.0,
+          0.125,
+          0.25,
+          0.375,
+          0.5,
+          0.625,
+          0.75,
+          0.875,
+          1.0
+        ],
+        "energies_eV": [
+          -305.47119892475115,
+          -305.4971504494802,
+          -305.5217117526854,
+          -305.5448035220347,
+          -305.56582226365254,
+          -305.5838150763939,
+          -305.59769838836917,
+          -305.6064875558772,
+          -305.6094987444716
+        ],
+        "cartesian_polarizations_e_A2": [
+          [
+            -3.008047470453776e-12,
+            1.0762799848997091e-10,
+            -0.014721252499419591
+          ],
+          [
+            -2.4922515908418865e-12,
+            9.437228341040951e-11,
+            -0.012941369398221545
+          ],
+          [
+            -2.023721693437933e-12,
+            8.10288628425061e-11,
+            -0.011140324200642726
+          ],
+          [
+            -1.6014710905404934e-12,
+            6.761493283359045e-11,
+            -0.009319310297787951
+          ],
+          [
+            -1.2222444672146522e-12,
+            5.4147027990742555e-11,
+            -0.007480101821425385
+          ],
+          [
+            -8.805748296377259e-13,
+            4.064000210066389e-11,
+            -0.005625130599961696
+          ],
+          [
+            -5.692386675561827e-13,
+            2.7106529505620835e-11,
+            -0.003757520675886179
+          ],
+          [
+            -2.7911118834669805e-13,
+            1.3556993944049548e-11,
+            -0.001881047414694729
+          ],
+          [
+            1.3802095019692353e-17,
+            3.902625759222718e-17,
+            -8.103277630495925e-19
+          ]
+        ],
+        "raw_reduced_polarization": [
+          [
+            -3.022004455684358e-10,
+            5.466004852061541e-09,
+            -1.0665110327446579
+          ],
+          [
+            -2.503815344069168e-10,
+            4.792798958065663e-09,
+            -0.9375637869516567
+          ],
+          [
+            -2.0331115232406725e-10,
+            4.115138845543417e-09,
+            -0.807083410111077
+          ],
+          [
+            -1.608901727382972e-10,
+            3.433897834443697e-09,
+            -0.6751563598650061
+          ],
+          [
+            -1.227915537284069e-10,
+            2.749915652753591e-09,
+            -0.5419111667922355
+          ],
+          [
+            -8.846605929151991e-11,
+            2.0639466661708804e-09,
+            -0.4075240096401617
+          ],
+          [
+            -5.7187986778782655e-11,
+            1.3766345549395235e-09,
+            -0.27222121601112226
+          ],
+          [
+            -2.804062313178309e-11,
+            6.88506668498986e-10,
+            -0.13627629992535215
+          ],
+          [
+            1.3866135111556953e-15,
+            1.9819908978126626e-15,
+            -5.87058403804814e-17
+          ]
+        ],
+        "unwrapped_reduced_polarization": [
+          [
+            -3.022004455684358e-10,
+            5.466004852061541e-09,
+            -1.0665110327446579
+          ],
+          [
+            -2.503815344069168e-10,
+            4.792798958065663e-09,
+            -0.9375637869516567
+          ],
+          [
+            -2.0331115232406725e-10,
+            4.115138845543417e-09,
+            -0.807083410111077
+          ],
+          [
+            -1.608901727382972e-10,
+            3.433897834443697e-09,
+            -0.6751563598650061
+          ],
+          [
+            -1.227915537284069e-10,
+            2.749915652753591e-09,
+            -0.5419111667922355
+          ],
+          [
+            -8.846605929151991e-11,
+            2.0639466661708804e-09,
+            -0.4075240096401617
+          ],
+          [
+            -5.7187986778782655e-11,
+            1.3766345549395235e-09,
+            -0.27222121601112226
+          ],
+          [
+            -2.8040623131783092e-11,
+            6.88506668498986e-10,
+            -0.13627629992535215
+          ],
+          [
+            1.3866135111543055e-15,
+            1.981990897827628e-15,
+            -5.551115123125783e-17
+          ]
+        ],
+        "berry_integer_shifts": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "folded_reduced_polarization": [
+          [
+            -3.0220043134576713e-10,
+            5.466004870946506e-09,
+            -0.06651103274465786
+          ],
+          [
+            -2.503815488275052e-10,
+            4.79279893550455e-09,
+            0.06243621304834335
+          ],
+          [
+            -2.0331114569671627e-10,
+            4.1151388963101e-09,
+            0.19291658988892302
+          ],
+          [
+            -1.608901900596038e-10,
+            3.4338978327497216e-09,
+            0.3248436401349939
+          ],
+          [
+            -1.2279155470196201e-10,
+            2.749915628541544e-09,
+            0.4580888332077645
+          ],
+          [
+            -8.846606780466004e-11,
+            2.0639466802307993e-09,
+            -0.4075240096401617
+          ],
+          [
+            -5.718797657650043e-11,
+            1.3766345841048633e-09,
+            -0.27222121601112226
+          ],
+          [
+            -2.8040625377201422e-11,
+            6.885066961004327e-10,
+            -0.13627629992535217
+          ],
+          [
+            1.3322676295501878e-15,
+            1.9984014443252818e-15,
+            -5.551115123125783e-17
+          ]
+        ]
+      },
+      "reflected": {
+        "reached": true,
+        "construction": "reflect_displacements_about_reconstructed_parent",
+        "energies_eV": [
+          -305.6094987444715,
+          -305.6064875558771,
+          -305.59769838836917,
+          -305.583815076394,
+          -305.5658222636526,
+          -305.5448035220347,
+          -305.5217117526854,
+          -305.49715044948016,
+          -305.47119892475126
+        ],
+        "cartesian_polarizations_e_A2": [
+          [
+            8.196708855697258e-18,
+            3.462525383296849e-17,
+            5.923381817221669e-18
+          ],
+          [
+            2.7912439801329624e-13,
+            -1.355694997753599e-11,
+            0.00188104741469477
+          ],
+          [
+            5.692497041759181e-13,
+            -2.710645592751678e-11,
+            0.003757520675886223
+          ],
+          [
+            8.805470369454662e-13,
+            -4.063996947393861e-11,
+            0.005625130599961768
+          ],
+          [
+            1.2222251344108643e-12,
+            -5.4146930670383603e-11,
+            0.00748010182142539
+          ],
+          [
+            1.6014896286312933e-12,
+            -6.761489529279604e-11,
+            0.00931931029778793
+          ],
+          [
+            2.0237335968641587e-12,
+            -8.102881777968084e-11,
+            0.011140324200642749
+          ],
+          [
+            2.4922896121506356e-12,
+            -9.437225328884653e-11,
+            0.0129413693982216
+          ],
+          [
+            3.008027647687501e-12,
+            -1.0762798177082303e-10,
+            0.014721252499419621
+          ]
+        ],
+        "raw_reduced_polarization": [
+          [
+            8.234740617350637e-16,
+            1.7584811397612691e-15,
+            4.2913142475309637e-16
+          ],
+          [
+            2.80419502275723e-11,
+            -6.885044356118208e-10,
+            0.13627629992535512
+          ],
+          [
+            5.718909556161748e-11,
+            -1.3766308181955588e-09,
+            0.2722212160111254
+          ],
+          [
+            8.846326712681276e-11,
+            -2.063945009187185e-09,
+            0.40752400964016694
+          ],
+          [
+            1.2278961147783534e-10,
+            -2.749910710233413e-09,
+            0.5419111667922358
+          ],
+          [
+            1.608920351488325e-10,
+            -3.4338959278936604e-09,
+            0.6751563598650046
+          ],
+          [
+            2.0331234818973908e-10,
+            -4.1151365569788695e-09,
+            0.8070834101110786
+          ],
+          [
+            2.503853541792302e-10,
+            -4.792797428309356e-09,
+            0.9375637869516604
+          ],
+          [
+            3.0219845409427874e-10,
+            -5.4660040029614484e-09,
+            1.06651103274466
+          ]
+        ],
+        "unwrapped_reduced_polarization": [
+          [
+            8.234740617350637e-16,
+            1.7584811397612691e-15,
+            4.2913142475309637e-16
+          ],
+          [
+            2.80419502275723e-11,
+            -6.885044356118208e-10,
+            0.13627629992535512
+          ],
+          [
+            5.718909556161748e-11,
+            -1.3766308181955588e-09,
+            0.2722212160111254
+          ],
+          [
+            8.846326712681276e-11,
+            -2.063945009187185e-09,
+            0.40752400964016694
+          ],
+          [
+            1.2278961147783534e-10,
+            -2.749910710233413e-09,
+            0.5419111667922358
+          ],
+          [
+            1.608920351488325e-10,
+            -3.4338959278936604e-09,
+            0.6751563598650046
+          ],
+          [
+            2.0331234818973908e-10,
+            -4.1151365569788695e-09,
+            0.8070834101110786
+          ],
+          [
+            2.503853541792302e-10,
+            -4.792797428309356e-09,
+            0.9375637869516604
+          ],
+          [
+            3.0219845409427874e-10,
+            -5.4660040029614484e-09,
+            1.06651103274466
+          ]
+        ],
+        "gauge_integer_shift": [
+          0,
+          0,
+          0
+        ],
+        "expected_opposite_endpoint_reduced_polarization": [
+          3.022032187954581e-10,
+          -5.466000888079745e-09,
+          1.0665110327446579
+        ],
+        "actual_opposite_endpoint_branch_residual": 6.110257442294523e-15
+      },
+      "pnp_branch": {
+        "construction": "incoming_path_concatenated_with_parent_reflection",
+        "reduced_polarization": [
+          [
+            -3.022004455684358e-10,
+            5.466004852061541e-09,
+            -1.0665110327446579
+          ],
+          [
+            -2.503815344069168e-10,
+            4.792798958065663e-09,
+            -0.9375637869516567
+          ],
+          [
+            -2.0331115232406725e-10,
+            4.115138845543417e-09,
+            -0.807083410111077
+          ],
+          [
+            -1.608901727382972e-10,
+            3.433897834443697e-09,
+            -0.6751563598650061
+          ],
+          [
+            -1.227915537284069e-10,
+            2.749915652753591e-09,
+            -0.5419111667922355
+          ],
+          [
+            -8.846605929151991e-11,
+            2.0639466661708804e-09,
+            -0.4075240096401617
+          ],
+          [
+            -5.7187986778782655e-11,
+            1.3766345549395235e-09,
+            -0.27222121601112226
+          ],
+          [
+            -2.804062313178309e-11,
+            6.88506668498986e-10,
+            -0.13627629992535215
+          ],
+          [
+            1.3866135111556953e-15,
+            1.9819908978126626e-15,
+            -5.87058403804814e-17
+          ],
+          [
+            2.80419502275723e-11,
+            -6.885044356118208e-10,
+            0.13627629992535512
+          ],
+          [
+            5.718909556161748e-11,
+            -1.3766308181955588e-09,
+            0.2722212160111254
+          ],
+          [
+            8.846326712681276e-11,
+            -2.063945009187185e-09,
+            0.40752400964016694
+          ],
+          [
+            1.2278961147783534e-10,
+            -2.749910710233413e-09,
+            0.5419111667922358
+          ],
+          [
+            1.608920351488325e-10,
+            -3.4338959278936604e-09,
+            0.6751563598650046
+          ],
+          [
+            2.0331234818973908e-10,
+            -4.1151365569788695e-09,
+            0.8070834101110786
+          ],
+          [
+            2.503853541792302e-10,
+            -4.792797428309356e-09,
+            0.9375637869516604
+          ],
+          [
+            3.0219845409427874e-10,
+            -5.4660040029614484e-09,
+            1.06651103274466
+          ]
+        ],
+        "unwrapped_reduced_polarization": [
+          [
+            -3.022004455684358e-10,
+            5.466004852061541e-09,
+            -1.0665110327446579
+          ],
+          [
+            -2.503815344069168e-10,
+            4.792798958065663e-09,
+            -0.9375637869516567
+          ],
+          [
+            -2.0331115232406725e-10,
+            4.115138845543417e-09,
+            -0.807083410111077
+          ],
+          [
+            -1.608901727382972e-10,
+            3.433897834443697e-09,
+            -0.6751563598650061
+          ],
+          [
+            -1.227915537284069e-10,
+            2.749915652753591e-09,
+            -0.5419111667922355
+          ],
+          [
+            -8.846605929151991e-11,
+            2.0639466661708804e-09,
+            -0.4075240096401617
+          ],
+          [
+            -5.7187986778782655e-11,
+            1.3766345549395235e-09,
+            -0.27222121601112226
+          ],
+          [
+            -2.8040623131783092e-11,
+            6.88506668498986e-10,
+            -0.13627629992535215
+          ],
+          [
+            1.3866135111543055e-15,
+            1.981990897827628e-15,
+            -5.551115123125783e-17
+          ],
+          [
+            2.80419502275723e-11,
+            -6.885044356118208e-10,
+            0.13627629992535512
+          ],
+          [
+            5.718909556161748e-11,
+            -1.3766308181955588e-09,
+            0.2722212160111254
+          ],
+          [
+            8.846326712681276e-11,
+            -2.063945009187185e-09,
+            0.40752400964016694
+          ],
+          [
+            1.2278961147783534e-10,
+            -2.749910710233413e-09,
+            0.5419111667922358
+          ],
+          [
+            1.608920351488325e-10,
+            -3.4338959278936604e-09,
+            0.6751563598650046
+          ],
+          [
+            2.0331234818973908e-10,
+            -4.1151365569788695e-09,
+            0.8070834101110786
+          ],
+          [
+            2.503853541792302e-10,
+            -4.792797428309356e-09,
+            0.9375637869516604
+          ],
+          [
+            3.0219845409427874e-10,
+            -5.4660040029614484e-09,
+            1.06651103274466
+          ]
+        ],
+        "berry_integer_shifts": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "folded_reduced_polarization": [
+          [
+            -3.0220043134576713e-10,
+            5.466004870946506e-09,
+            -0.06651103274465786
+          ],
+          [
+            -2.503815488275052e-10,
+            4.79279893550455e-09,
+            0.06243621304834335
+          ],
+          [
+            -2.0331114569671627e-10,
+            4.1151388963101e-09,
+            0.19291658988892302
+          ],
+          [
+            -1.608901900596038e-10,
+            3.4338978327497216e-09,
+            0.3248436401349939
+          ],
+          [
+            -1.2279155470196201e-10,
+            2.749915628541544e-09,
+            0.4580888332077645
+          ],
+          [
+            -8.846606780466004e-11,
+            2.0639466802307993e-09,
+            -0.4075240096401617
+          ],
+          [
+            -5.718797657650043e-11,
+            1.3766345841048633e-09,
+            -0.27222121601112226
+          ],
+          [
+            -2.8040625377201422e-11,
+            6.885066961004327e-10,
+            -0.13627629992535217
+          ],
+          [
+            1.3322676295501878e-15,
+            1.9984014443252818e-15,
+            -5.551115123125783e-17
+          ],
+          [
+            2.804190213367974e-11,
+            -6.885044201432322e-10,
+            0.13627629992535506
+          ],
+          [
+            5.718914231067629e-11,
+            -1.3766308093465796e-09,
+            0.2722212160111255
+          ],
+          [
+            8.846323673594725e-11,
+            -2.0639450148962624e-09,
+            0.4075240096401669
+          ],
+          [
+            1.227895563005177e-10,
+            -2.7499106880490842e-09,
+            -0.45808883320776417
+          ],
+          [
+            1.6089207743874567e-10,
+            -3.4338959453705797e-09,
+            -0.32484364013499545
+          ],
+          [
+            2.0331236694204335e-10,
+            -4.115136564841748e-09,
+            -0.19291658988892135
+          ],
+          [
+            2.5038537909694014e-10,
+            -4.7927974367034665e-09,
+            -0.06243621304833957
+          ],
+          [
+            3.0219848845547403e-10,
+            -5.466003982768086e-09,
+            0.06651103274466008
+          ]
+        ]
+      },
+      "incoming_structure_ids": [
+        "incoming_00_000",
+        "incoming_00_001",
+        "incoming_00_002",
+        "incoming_00_003",
+        "incoming_00_004",
+        "incoming_00_005",
+        "incoming_00_006",
+        "incoming_00_007",
+        "incoming_00_008"
+      ],
+      "reflected_structure_ids": [
+        "reflected_00_001",
+        "reflected_00_002",
+        "reflected_00_003",
+        "reflected_00_004",
+        "reflected_00_005",
+        "reflected_00_006",
+        "reflected_00_007",
+        "reflected_00_008"
+      ]
+    },
+    {
+      "orbit_id": 1,
+      "formal_class": [
+        0.0,
+        0.0,
+        0.5
+      ],
+      "formal_classes_in_orbit": [
+        [
+          0.0,
+          0.0,
+          0.5
+        ]
+      ],
+      "target_reduced_polarization": [
+        0.0,
+        0.0,
+        -1.5
+      ],
+      "bec_backprojection": {
+        "converged_to_target": true,
+        "history": [
+          {
+            "iteration": 0,
+            "reduced_polarization": [
+              -3.022002341832811e-10,
+              5.466004323611549e-09,
+              -1.0665110327446579
+            ],
+            "branch_aligned_reduced_polarization": [
+              -3.022002341832811e-10,
+              5.466004323611549e-09,
+              -1.0665110327446579
+            ],
+            "target_residual": 0.4334889672553422,
+            "energy_eV": -305.4711989247512,
+            "max_atomic_step_A": 0.03147587236355075,
+            "max_log_strain_component": 0.004252861156567414,
+            "step_scale": 1.0,
+            "strain_jacobian_refreshed": false,
+            "strain_jacobian_frobenius_norm": 2.737626096568256,
+            "cell_principal_stretches": [
+              0.9999364231955946,
+              0.9992002873878214,
+              0.995756169450932
+            ],
+            "cell_volume_ratio": 0.9948965943157495,
+            "cell_rmsd_from_input_A": 0.023315943165359464
+          },
+          {
+            "iteration": 1,
+            "reduced_polarization": [
+              -1.7961277252920304e-11,
+              1.0823486629915941e-11,
+              -1.5048275865709753
+            ],
+            "branch_aligned_reduced_polarization": [
+              -1.7961277252920304e-11,
+              1.0823486629915941e-11,
+              -1.5048275865709753
+            ],
+            "target_residual": 0.004827586570975262,
+            "energy_eV": -305.46445525344234,
+            "max_atomic_step_A": 0.0003485014412108744,
+            "max_log_strain_component": 4.658526165863508e-05,
+            "step_scale": 1.0,
+            "strain_jacobian_refreshed": false,
+            "strain_jacobian_frobenius_norm": 2.737626096568256,
+            "cell_principal_stretches": [
+              0.9999371195853521,
+              0.9992090438655308,
+              0.995802558093139
+            ],
+            "cell_volume_ratio": 0.994952355000222,
+            "cell_rmsd_from_input_A": 0.023061504281012817
+          },
+          {
+            "iteration": 2,
+            "reduced_polarization": [
+              -3.029321479859091e-15,
+              -1.9641673099447142e-14,
+              -1.499959466719344
+            ],
+            "branch_aligned_reduced_polarization": [
+              -3.029321479859091e-15,
+              -1.9641673099447142e-14,
+              -1.499959466719344
+            ],
+            "target_residual": 4.0533280655896675e-05,
+            "energy_eV": -305.4658834568678
+          }
+        ],
+        "iterations": 2
+      },
+      "parent": {
+        "candidate_id": "bec_projection_01",
+        "source": "MACEField_BEC_backprojection",
+        "spacegroup": "Pba2",
+        "spacegroup_number": 32,
+        "pointgroup": "mm2",
+        "has_inversion": false,
+        "is_polar_point_group": true,
+        "nonpolar_parent_hypothesis": false,
+        "symmetry_tolerance_A": null,
+        "target_reduced_polarization": [
+          0.0,
+          0.0,
+          -1.5
+        ],
+        "formal_class": [
+          0.0,
+          0.0,
+          0.5
+        ],
+        "target_residual": 4.0533280655896675e-05,
+        "parent_symmetrization_rmsd_A": 0.03779979366437754,
+        "parent_cell_rmsd_A": 0.023061504281012817,
+        "energy_eV": -305.4658834568678,
+        "reduced_polarization": [
+          -3.029321479859091e-15,
+          -1.9641673099447142e-14,
+          -1.499959466719344
+        ],
+        "cartesian_polarization_e_A2": [
+          9.176817387608372e-14,
+          1.0034882576955862e-12,
+          -0.020721914905071866
+        ],
+        "ranking_score": 0.5436462362959426
+      },
+      "branch_status": "awaiting_branch_sampling"
+    },
+    {
+      "orbit_id": 2,
+      "formal_class": [
+        0.0,
+        0.5,
+        0.0
+      ],
+      "formal_classes_in_orbit": [
+        [
+          0.0,
+          0.5,
+          0.0
+        ]
+      ],
+      "target_reduced_polarization": [
+        0.0,
+        0.5,
+        -1.0
+      ],
+      "bec_backprojection": {
+        "converged_to_target": true,
+        "history": [
+          {
+            "iteration": 0,
+            "reduced_polarization": [
+              -3.022002341832811e-10,
+              5.466004323611549e-09,
+              -1.0665110327446579
+            ],
+            "branch_aligned_reduced_polarization": [
+              -3.022002341832811e-10,
+              5.4660043158349936e-09,
+              -1.0665110327446579
+            ],
+            "target_residual": 0.5044043140286933,
+            "energy_eV": -305.4711989247512,
+            "max_atomic_step_A": 0.05493747596453535,
+            "max_log_strain_component": 0.003306963770611909,
+            "step_scale": 1.0,
+            "strain_jacobian_refreshed": false,
+            "strain_jacobian_frobenius_norm": 2.737626096568256,
+            "cell_principal_stretches": [
+              1.0037120657367269,
+              1.0000097550291773,
+              0.9970743700386174
+            ],
+            "cell_volume_ratio": 1.0007853382395469,
+            "cell_rmsd_from_input_A": 0.03451221292956693
+          },
+          {
+            "iteration": 1,
+            "reduced_polarization": [
+              4.501826129615064e-11,
+              0.496700618116832,
+              -0.9959276398530262
+            ],
+            "branch_aligned_reduced_polarization": [
+              4.501826129615064e-11,
+              0.496700618116832,
+              -0.9959276398530262
+            ],
+            "target_residual": 0.005241186695552565,
+            "energy_eV": -305.261575866343,
+            "max_atomic_step_A": 0.0004941717486984907,
+            "max_log_strain_component": 4.149893571716849e-05,
+            "step_scale": 1.0,
+            "strain_jacobian_refreshed": false,
+            "strain_jacobian_frobenius_norm": 2.737626096568256,
+            "cell_principal_stretches": [
+              1.0037090947456795,
+              1.0000091346281008,
+              0.9970281611445613
+            ],
+            "cell_volume_ratio": 1.0007353743203267,
+            "cell_rmsd_from_input_A": 0.03472505755383912
+          },
+          {
+            "iteration": 2,
+            "reduced_polarization": [
+              1.3526301215767528e-13,
+              0.5000000818495808,
+              -0.9999925173843665
+            ],
+            "branch_aligned_reduced_polarization": [
+              1.3526301215767528e-13,
+              0.5000000818495808,
+              -0.9999925173843665
+            ],
+            "target_residual": 7.483063281389474e-06,
+            "energy_eV": -305.2600015880337
+          }
+        ],
+        "iterations": 2
+      },
+      "parent": {
+        "candidate_id": "bec_projection_02",
+        "source": "MACEField_BEC_backprojection",
+        "spacegroup": "Pc",
+        "spacegroup_number": 7,
+        "pointgroup": "m",
+        "has_inversion": false,
+        "is_polar_point_group": true,
+        "nonpolar_parent_hypothesis": false,
+        "symmetry_tolerance_A": null,
+        "target_reduced_polarization": [
+          0.0,
+          0.5,
+          -1.0
+        ],
+        "formal_class": [
+          0.0,
+          0.5,
+          0.0
+        ],
+        "target_residual": 7.483063281389474e-06,
+        "parent_symmetrization_rmsd_A": 0.06480804569972784,
+        "parent_cell_rmsd_A": 0.03472505755383912,
+        "energy_eV": -305.2600015880337,
+        "reduced_polarization": [
+          1.3526301215767528e-13,
+          0.5000000818495808,
+          -0.9999925173843665
+        ],
+        "cartesian_polarization_e_A2": [
+          -8.365181373638974e-14,
+          0.009793220174394542,
+          -0.013768676803686306
+        ],
+        "ranking_score": 0.5735042762147504
+      },
+      "branch_status": "awaiting_branch_sampling"
+    },
+    {
+      "orbit_id": 3,
+      "formal_class": [
+        0.5,
+        0.0,
+        0.0
+      ],
+      "formal_classes_in_orbit": [
+        [
+          0.5,
+          0.0,
+          0.0
+        ]
+      ],
+      "target_reduced_polarization": [
+        -0.5,
+        0.0,
+        -1.0
+      ],
+      "bec_backprojection": {
+        "converged_to_target": true,
+        "history": [
+          {
+            "iteration": 0,
+            "reduced_polarization": [
+              -3.022002341832811e-10,
+              5.466004323611549e-09,
+              -1.0665110327446579
+            ],
+            "branch_aligned_reduced_polarization": [
+              -3.022002093011622e-10,
+              5.466004323611549e-09,
+              -1.0665110327446579
+            ],
+            "target_residual": 0.5044043191474085,
+            "energy_eV": -305.4711989247512,
+            "max_atomic_step_A": 0.02874186841819503,
+            "max_log_strain_component": 0.0009401928601658211,
+            "step_scale": 1.0,
+            "strain_jacobian_refreshed": false,
+            "strain_jacobian_frobenius_norm": 2.737626096568256,
+            "cell_principal_stretches": [
+              1.0013256225778149,
+              1.000122758041769,
+              0.9993377542167331
+            ],
+            "cell_volume_ratio": 1.0007853382754228,
+            "cell_rmsd_from_input_A": 0.00610391707749373
+          },
+          {
+            "iteration": 1,
+            "reduced_polarization": [
+              -0.49941278942493605,
+              2.3967852255886665e-11,
+              -0.9988636636923602
+            ],
+            "branch_aligned_reduced_polarization": [
+              -0.49941278942493605,
+              2.3967852255886665e-11,
+              -0.9988636636923602
+            ],
+            "target_residual": 0.0012790920465421162,
+            "energy_eV": -305.404678155242,
+            "max_atomic_step_A": 9.273232897160552e-05,
+            "max_log_strain_component": 1.1278526419522625e-05,
+            "step_scale": 1.0,
+            "strain_jacobian_refreshed": false,
+            "strain_jacobian_frobenius_norm": 2.737626096568256,
+            "cell_principal_stretches": [
+              1.0013191948218043,
+              1.00012063610878,
+              0.9993327296896145
+            ],
+            "cell_volume_ratio": 1.0007717589001064,
+            "cell_rmsd_from_input_A": 0.006072350200046836
+          },
+          {
+            "iteration": 2,
+            "reduced_polarization": [
+              -0.4999992304271514,
+              3.096504661059169e-14,
+              -0.9999983747499481
+            ],
+            "branch_aligned_reduced_polarization": [
+              -0.4999992304271514,
+              3.096504661059169e-14,
+              -0.9999983747499481
+            ],
+            "target_residual": 1.7982436154305815e-06,
+            "energy_eV": -305.40488377858617
+          }
+        ],
+        "iterations": 2
+      },
+      "parent": {
+        "candidate_id": "bec_projection_03",
+        "source": "MACEField_BEC_backprojection",
+        "spacegroup": "Pc",
+        "spacegroup_number": 7,
+        "pointgroup": "m",
+        "has_inversion": false,
+        "is_polar_point_group": true,
+        "nonpolar_parent_hypothesis": false,
+        "symmetry_tolerance_A": null,
+        "target_reduced_polarization": [
+          -0.5,
+          0.0,
+          -1.0
+        ],
+        "formal_class": [
+          0.5,
+          0.0,
+          0.0
+        ],
+        "target_residual": 1.7982436154305815e-06,
+        "parent_symmetrization_rmsd_A": 0.03335370397142991,
+        "parent_cell_rmsd_A": 0.006072350200046836,
+        "energy_eV": -305.40488377858617,
+        "reduced_polarization": [
+          -0.4999992304271514,
+          3.096504661059169e-14,
+          -0.9999983747499481
+        ],
+        "cartesian_polarization_e_A2": [
+          -0.004960124196443884,
+          2.89488595800535e-13,
+          -0.013796691774631406
+        ],
+        "ranking_score": 0.5348753880086725
+      },
+      "branch_status": "awaiting_branch_sampling"
+    },
+    {
+      "orbit_id": 4,
+      "formal_class": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "formal_classes_in_orbit": [
+        [
+          0.0,
+          0.5,
+          0.5
+        ]
+      ],
+      "target_reduced_polarization": [
+        0.0,
+        0.5,
+        -1.5
+      ],
+      "bec_backprojection": {
+        "converged_to_target": true,
+        "history": [
+          {
+            "iteration": 0,
+            "reduced_polarization": [
+              -3.022002341832811e-10,
+              5.466004323611549e-09,
+              -1.0665110327446579
+            ],
+            "branch_aligned_reduced_polarization": [
+              -3.022002341832811e-10,
+              5.4660043158349936e-09,
+              -1.0665110327446579
+            ],
+            "target_residual": 0.6617497104389988,
+            "energy_eV": -305.4711989247512,
+            "max_atomic_step_A": 0.06407463621484615,
+            "max_log_strain_component": 0.004252861151464456,
+            "step_scale": 1.0,
+            "strain_jacobian_refreshed": false,
+            "strain_jacobian_frobenius_norm": 2.737626096568256,
+            "cell_principal_stretches": [
+              1.001204762921174,
+              0.9999364231576581,
+              0.9937626023432191
+            ],
+            "cell_volume_ratio": 0.9948965942734085,
+            "cell_rmsd_from_input_A": 0.04126943252551052
+          },
+          {
+            "iteration": 1,
+            "reduced_polarization": [
+              2.960466448312375e-11,
+              0.494329335703702,
+              -1.4972685240521073
+            ],
+            "branch_aligned_reduced_polarization": [
+              2.960466448312375e-11,
+              0.494329335703702,
+              -1.4972685240521073
+            ],
+            "target_residual": 0.006294235014298793,
+            "energy_eV": -305.2594052769904,
+            "max_atomic_step_A": 0.0006970294881015215,
+            "max_log_strain_component": 4.001306671191292e-05,
+            "step_scale": 1.0,
+            "strain_jacobian_refreshed": false,
+            "strain_jacobian_frobenius_norm": 2.737626096568256,
+            "cell_principal_stretches": [
+              1.001228281288077,
+              0.9999359819443362,
+              0.9937044121029432
+            ],
+            "cell_volume_ratio": 0.9948612674766972,
+            "cell_rmsd_from_input_A": 0.04169922220570459
+          },
+          {
+            "iteration": 2,
+            "reduced_polarization": [
+              1.8150418174934476e-13,
+              0.5000013945038971,
+              -1.500021091368384
+            ],
+            "branch_aligned_reduced_polarization": [
+              1.8150418174934476e-13,
+              0.5000013945038971,
+              -1.500021091368384
+            ],
+            "target_residual": 2.1137418513846515e-05,
+            "energy_eV": -305.25350994177325
+          }
+        ],
+        "iterations": 2
+      },
+      "parent": {
+        "candidate_id": "bec_projection_04",
+        "source": "MACEField_BEC_backprojection",
+        "spacegroup": "Pc",
+        "spacegroup_number": 7,
+        "pointgroup": "m",
+        "has_inversion": false,
+        "is_polar_point_group": true,
+        "nonpolar_parent_hypothesis": false,
+        "symmetry_tolerance_A": null,
+        "target_reduced_polarization": [
+          0.0,
+          0.5,
+          -1.5
+        ],
+        "formal_class": [
+          0.0,
+          0.5,
+          0.5
+        ],
+        "target_residual": 2.1137418513846515e-05,
+        "parent_symmetrization_rmsd_A": 0.07573165009858297,
+        "parent_cell_rmsd_A": 0.04169922220570459,
+        "energy_eV": -305.25350994177325,
+        "reduced_polarization": [
+          1.8150418174934476e-13,
+          0.5000013945038971,
+          -1.500021091368384
+        ],
+        "cartesian_polarization_e_A2": [
+          1.609403770347753e-15,
+          0.009818703465433603,
+          -0.020690164475330557
+        ],
+        "ranking_score": 0.5861987304870369
+      },
+      "branch_status": "awaiting_branch_sampling"
+    },
+    {
+      "orbit_id": 5,
+      "formal_class": [
+        0.5,
+        0.0,
+        0.5
+      ],
+      "formal_classes_in_orbit": [
+        [
+          0.5,
+          0.0,
+          0.5
+        ]
+      ],
+      "target_reduced_polarization": [
+        -0.5,
+        0.0,
+        -1.5
+      ],
+      "bec_backprojection": {
+        "converged_to_target": true,
+        "history": [
+          {
+            "iteration": 0,
+            "reduced_polarization": [
+              -3.022002341832811e-10,
+              5.466004323611549e-09,
+              -1.0665110327446579
+            ],
+            "branch_aligned_reduced_polarization": [
+              -3.022002093011622e-10,
+              5.466004323611549e-09,
+              -1.0665110327446579
+            ],
+            "target_residual": 0.6617497143406281,
+            "energy_eV": -305.4711989247512,
+            "max_atomic_step_A": 0.04342625439688753,
+            "max_log_strain_component": 0.0042528611590776175,
+            "step_scale": 1.0,
+            "strain_jacobian_refreshed": false,
+            "strain_jacobian_frobenius_norm": 2.737626096568256,
+            "cell_principal_stretches": [
+              1.0001377608001276,
+              0.9992002873865647,
+              0.9955557138985641
+            ],
+            "cell_volume_ratio": 0.9948965943090736,
+            "cell_rmsd_from_input_A": 0.023822497123497665
+          },
+          {
+            "iteration": 1,
+            "reduced_polarization": [
+              -0.49543169136525644,
+              3.6399524269443746e-11,
+              -1.5026578314933159
+            ],
+            "branch_aligned_reduced_polarization": [
+              -0.49543169136525644,
+              3.6399524269443746e-11,
+              -1.5026578314933159
+            ],
+            "target_residual": 0.005285216365404003,
+            "energy_eV": -305.4124298500806,
+            "max_atomic_step_A": 0.00033085387161774926,
+            "max_log_strain_component": 2.5112258339056174e-05,
+            "step_scale": 1.0,
+            "strain_jacobian_refreshed": false,
+            "strain_jacobian_frobenius_norm": 2.737626096568256,
+            "cell_principal_stretches": [
+              1.0001428152234932,
+              0.9992050076452496,
+              0.9955760572556603
+            ],
+            "cell_volume_ratio": 0.9949266522839609,
+            "cell_rmsd_from_input_A": 0.02369767992332559
+          },
+          {
+            "iteration": 2,
+            "reduced_polarization": [
+              -0.5000018619619518,
+              1.8986838572551135e-13,
+              -1.499976679181784
+            ],
+            "branch_aligned_reduced_polarization": [
+              -0.5000018619619518,
+              1.8986838572551135e-13,
+              -1.499976679181784
+            ],
+            "target_residual": 2.3395030766777434e-05,
+            "energy_eV": -305.41224500012765
+          }
+        ],
+        "iterations": 2
+      },
+      "parent": {
+        "candidate_id": "bec_projection_05",
+        "source": "MACEField_BEC_backprojection",
+        "spacegroup": "Pc",
+        "spacegroup_number": 7,
+        "pointgroup": "m",
+        "has_inversion": false,
+        "is_polar_point_group": true,
+        "nonpolar_parent_hypothesis": false,
+        "symmetry_tolerance_A": null,
+        "target_reduced_polarization": [
+          -0.5,
+          0.0,
+          -1.5
+        ],
+        "formal_class": [
+          0.5,
+          0.0,
+          0.5
+        ],
+        "target_residual": 2.3395030766777434e-05,
+        "parent_symmetrization_rmsd_A": 0.05045649035255941,
+        "parent_cell_rmsd_A": 0.02369767992332559,
+        "energy_eV": -305.41224500012765,
+        "reduced_polarization": [
+          -0.5000018619619518,
+          1.8986838572551135e-13,
+          -1.499976679181784
+        ],
+        "cartesian_polarization_e_A2": [
+          -0.004982287514597211,
+          8.198297522407244e-13,
+          -0.020717515833658773
+        ],
+        "ranking_score": 0.5564277003949244
+      },
+      "branch_status": "awaiting_branch_sampling"
+    },
+    {
+      "orbit_id": 6,
+      "formal_class": [
+        0.5,
+        0.5,
+        0.0
+      ],
+      "formal_classes_in_orbit": [
+        [
+          0.5,
+          0.5,
+          0.0
+        ]
+      ],
+      "target_reduced_polarization": [
+        -0.5,
+        0.5,
+        -1.0
+      ],
+      "bec_backprojection": {
+        "converged_to_target": true,
+        "history": [
+          {
+            "iteration": 0,
+            "reduced_polarization": [
+              -3.022002341832811e-10,
+              5.466004323611549e-09,
+              -1.0665110327446579
+            ],
+            "branch_aligned_reduced_polarization": [
+              -3.022002093011622e-10,
+              5.4660043158349936e-09,
+              -1.0665110327446579
+            ],
+            "target_residual": 0.7102279294061565,
+            "energy_eV": -305.4711989247512,
+            "max_atomic_step_A": 0.06187506831359742,
+            "max_log_strain_component": 0.0033069637721504764,
+            "step_scale": 1.0,
+            "strain_jacobian_refreshed": false,
+            "strain_jacobian_frobenius_norm": 2.737626096568256,
+            "cell_principal_stretches": [
+              1.0038394057538327,
+              1.0000182532402089,
+              0.9969394160608452
+            ],
+            "cell_volume_ratio": 1.0007853382328313,
+            "cell_rmsd_from_input_A": 0.03486319930369283
+          },
+          {
+            "iteration": 1,
+            "reduced_polarization": [
+              -0.49633356625222314,
+              0.4958506182407819,
+              -0.9946802111192082
+            ],
+            "branch_aligned_reduced_polarization": [
+              -0.49633356625222314,
+              0.4958506182407819,
+              -0.9946802111192082
+            ],
+            "target_residual": 0.007678558402901196,
+            "energy_eV": -305.2002952493883,
+            "max_atomic_step_A": 0.0006715912323654339,
+            "max_log_strain_component": 5.465230629173429e-05,
+            "step_scale": 1.0,
+            "strain_jacobian_refreshed": false,
+            "strain_jacobian_frobenius_norm": 2.737626096568256,
+            "cell_principal_stretches": [
+              1.003835679162936,
+              1.0000167026420064,
+              0.9968791155967291
+            ],
+            "cell_volume_ratio": 1.000719538429414,
+            "cell_rmsd_from_input_A": 0.03513520494120621
+          },
+          {
+            "iteration": 2,
+            "reduced_polarization": [
+              -0.4999964182501397,
+              0.5000000699439732,
+              -0.9999896641968186
+            ],
+            "branch_aligned_reduced_polarization": [
+              -0.4999964182501397,
+              0.5000000699439732,
+              -0.9999896641968186
+            ],
+            "target_residual": 1.0939042537017555e-05,
+            "energy_eV": -305.19721056694976
+          }
+        ],
+        "iterations": 2
+      },
+      "parent": {
+        "candidate_id": "bec_projection_06",
+        "source": "MACEField_BEC_backprojection",
+        "spacegroup": "P1",
+        "spacegroup_number": 1,
+        "pointgroup": "1",
+        "has_inversion": false,
+        "is_polar_point_group": true,
+        "nonpolar_parent_hypothesis": false,
+        "symmetry_tolerance_A": null,
+        "target_reduced_polarization": [
+          -0.5,
+          0.5,
+          -1.0
+        ],
+        "formal_class": [
+          0.5,
+          0.5,
+          0.0
+        ],
+        "target_residual": 1.0939042537017555e-05,
+        "parent_symmetrization_rmsd_A": 0.0728476246632793,
+        "parent_cell_rmsd_A": 0.03513520494120621,
+        "energy_eV": -305.19721056694976,
+        "reduced_polarization": [
+          -0.4999964182501397,
+          0.5000000699439732,
+          -0.9999896641968186
+        ],
+        "cartesian_polarization_e_A2": [
+          -0.004960281323384663,
+          0.009793273203969105,
+          -0.013763905685767417
+        ],
+        "ranking_score": 0.5816533039836549
+      },
+      "branch_status": "awaiting_branch_sampling"
+    },
+    {
+      "orbit_id": 7,
+      "formal_class": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "formal_classes_in_orbit": [
+        [
+          0.5,
+          0.5,
+          0.5
+        ]
+      ],
+      "target_reduced_polarization": [
+        -0.5,
+        0.5,
+        -1.5
+      ],
+      "bec_backprojection": {
+        "converged_to_target": true,
+        "history": [
+          {
+            "iteration": 0,
+            "reduced_polarization": [
+              -3.022002341832811e-10,
+              5.466004323611549e-09,
+              -1.0665110327446579
+            ],
+            "branch_aligned_reduced_polarization": [
+              -3.022002093011622e-10,
+              5.4660043158349936e-09,
+              -1.0665110327446579
+            ],
+            "target_residual": 0.8294050150342103,
+            "energy_eV": -305.4711989247512,
+            "max_atomic_step_A": 0.07084055275976653,
+            "max_log_strain_component": 0.0042528611539746596,
+            "step_scale": 1.0,
+            "strain_jacobian_refreshed": false,
+            "strain_jacobian_frobenius_norm": 2.737626096568256,
+            "cell_principal_stretches": [
+              1.0013798571308226,
+              0.9998647556311401,
+              0.9936600577126103
+            ],
+            "cell_volume_ratio": 0.994896594266732,
+            "cell_rmsd_from_input_A": 0.04155775484797842
+          },
+          {
+            "iteration": 1,
+            "reduced_polarization": [
+              -0.4925402385960634,
+              0.49351802524618876,
+              -1.4951620984305651
+            ],
+            "branch_aligned_reduced_polarization": [
+              -0.4925402385960634,
+              0.49351802524618876,
+              -1.4951620984305651
+            ],
+            "target_residual": 0.011003150844564887,
+            "energy_eV": -305.19588822263404,
+            "max_atomic_step_A": 0.0009703295729556546,
+            "max_log_strain_component": 5.169112856808554e-05,
+            "step_scale": 1.0,
+            "strain_jacobian_refreshed": false,
+            "strain_jacobian_frobenius_norm": 2.737626096568256,
+            "cell_principal_stretches": [
+              1.0014030628621302,
+              0.9998629419179642,
+              0.9935770435012542
+            ],
+            "cell_volume_ratio": 0.9948347257217556,
+            "cell_rmsd_from_input_A": 0.04211523038082715
+          },
+          {
+            "iteration": 2,
+            "reduced_polarization": [
+              -0.4999930888150835,
+              0.5000008187164285,
+              -1.500038329512885
+            ],
+            "branch_aligned_reduced_polarization": [
+              -0.4999930888150835,
+              0.5000008187164285,
+              -1.500038329512885
+            ],
+            "target_residual": 3.895621043606661e-05,
+            "energy_eV": -305.1862006899544
+          }
+        ],
+        "iterations": 2
+      },
+      "parent": {
+        "candidate_id": "bec_projection_07",
+        "source": "MACEField_BEC_backprojection",
+        "spacegroup": "P1",
+        "spacegroup_number": 1,
+        "pointgroup": "1",
+        "has_inversion": false,
+        "is_polar_point_group": true,
+        "nonpolar_parent_hypothesis": false,
+        "symmetry_tolerance_A": null,
+        "target_reduced_polarization": [
+          -0.5,
+          0.5,
+          -1.5
+        ],
+        "formal_class": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "target_residual": 3.895621043606661e-05,
+        "parent_symmetrization_rmsd_A": 0.08294992407739096,
+        "parent_cell_rmsd_A": 0.04211523038082715,
+        "energy_eV": -305.1862006899544,
+        "reduced_polarization": [
+          -0.4999930888150835,
+          0.5000008187164285,
+          -1.500038329512885
+        ],
+        "cartesian_polarization_e_A2": [
+          -0.0049825365223040525,
+          0.009818786184230136,
+          -0.02068567302693775
+        ],
+        "ranking_score": 0.5935566440934699
+      },
+      "branch_status": "awaiting_branch_sampling"
+    }
+  ],
+  "sampled_polarization_branches": [
+    {
+      "orbit_id": 0,
+      "candidate_id": "inversion_parent_endpoint_00",
+      "formal_class": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "construction": "MACEField-BEC-parent plus variable-cell P-N-P path and symmetric log-strain continuation beyond both polar endpoints",
+      "geometry_diagnostics": {
+        "collision_aware": false,
+        "permutations_tested": 1,
+        "selected_order": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39
+        ],
+        "endpoint_rmsd_A": 0.08959236321924093,
+        "minimum_distance_A_by_image": [
+          2.0447913855041024,
+          2.0452373720071235,
+          2.0457202352670945,
+          2.04623994917794,
+          2.046796485668777,
+          2.0473898147114538,
+          2.0480199043286125,
+          2.0486867206022485,
+          2.049390227682771
+        ],
+        "minimum_distance_A": 2.0447913855041024,
+        "minimum_distance_floor_A": 0.0,
+        "geometry_valid": true,
+        "parameters": [
+          0.0,
+          0.125,
+          0.25,
+          0.375,
+          0.5,
+          0.625,
+          0.75,
+          0.875,
+          1.0
+        ],
+        "cell_mode": "variable_cell",
+        "cell_volume_A3_by_image": [
+          607.978017837286,
+          607.978017837286,
+          607.978017837286,
+          607.978017837286,
+          607.978017837286,
+          607.978017837286,
+          607.978017837286,
+          607.978017837286,
+          607.978017837286
+        ],
+        "cell_deformation_log_strain_norm": 0.0
+      },
+      "parent_reduced_polarization": [
+        1.3866135111556953e-15,
+        1.9819908978126626e-15,
+        -5.87058403804814e-17
+      ],
+      "incoming": {
+        "reached": true,
+        "construction": "variable_cell_linear_interpolation",
+        "continuation_fractions": [
+          0.0,
+          0.125,
+          0.25,
+          0.375,
+          0.5,
+          0.625,
+          0.75,
+          0.875,
+          1.0
+        ],
+        "energies_eV": [
+          -305.47119892475115,
+          -305.4971504494802,
+          -305.5217117526854,
+          -305.5448035220347,
+          -305.56582226365254,
+          -305.5838150763939,
+          -305.59769838836917,
+          -305.6064875558772,
+          -305.6094987444716
+        ],
+        "cartesian_polarizations_e_A2": [
+          [
+            -3.008047470453776e-12,
+            1.0762799848997091e-10,
+            -0.014721252499419591
+          ],
+          [
+            -2.4922515908418865e-12,
+            9.437228341040951e-11,
+            -0.012941369398221545
+          ],
+          [
+            -2.023721693437933e-12,
+            8.10288628425061e-11,
+            -0.011140324200642726
+          ],
+          [
+            -1.6014710905404934e-12,
+            6.761493283359045e-11,
+            -0.009319310297787951
+          ],
+          [
+            -1.2222444672146522e-12,
+            5.4147027990742555e-11,
+            -0.007480101821425385
+          ],
+          [
+            -8.805748296377259e-13,
+            4.064000210066389e-11,
+            -0.005625130599961696
+          ],
+          [
+            -5.692386675561827e-13,
+            2.7106529505620835e-11,
+            -0.003757520675886179
+          ],
+          [
+            -2.7911118834669805e-13,
+            1.3556993944049548e-11,
+            -0.001881047414694729
+          ],
+          [
+            1.3802095019692353e-17,
+            3.902625759222718e-17,
+            -8.103277630495925e-19
+          ]
+        ],
+        "raw_reduced_polarization": [
+          [
+            -3.022004455684358e-10,
+            5.466004852061541e-09,
+            -1.0665110327446579
+          ],
+          [
+            -2.503815344069168e-10,
+            4.792798958065663e-09,
+            -0.9375637869516567
+          ],
+          [
+            -2.0331115232406725e-10,
+            4.115138845543417e-09,
+            -0.807083410111077
+          ],
+          [
+            -1.608901727382972e-10,
+            3.433897834443697e-09,
+            -0.6751563598650061
+          ],
+          [
+            -1.227915537284069e-10,
+            2.749915652753591e-09,
+            -0.5419111667922355
+          ],
+          [
+            -8.846605929151991e-11,
+            2.0639466661708804e-09,
+            -0.4075240096401617
+          ],
+          [
+            -5.7187986778782655e-11,
+            1.3766345549395235e-09,
+            -0.27222121601112226
+          ],
+          [
+            -2.804062313178309e-11,
+            6.88506668498986e-10,
+            -0.13627629992535215
+          ],
+          [
+            1.3866135111556953e-15,
+            1.9819908978126626e-15,
+            -5.87058403804814e-17
+          ]
+        ],
+        "unwrapped_reduced_polarization": [
+          [
+            -3.022004455684358e-10,
+            5.466004852061541e-09,
+            -1.0665110327446579
+          ],
+          [
+            -2.503815344069168e-10,
+            4.792798958065663e-09,
+            -0.9375637869516567
+          ],
+          [
+            -2.0331115232406725e-10,
+            4.115138845543417e-09,
+            -0.807083410111077
+          ],
+          [
+            -1.608901727382972e-10,
+            3.433897834443697e-09,
+            -0.6751563598650061
+          ],
+          [
+            -1.227915537284069e-10,
+            2.749915652753591e-09,
+            -0.5419111667922355
+          ],
+          [
+            -8.846605929151991e-11,
+            2.0639466661708804e-09,
+            -0.4075240096401617
+          ],
+          [
+            -5.7187986778782655e-11,
+            1.3766345549395235e-09,
+            -0.27222121601112226
+          ],
+          [
+            -2.8040623131783092e-11,
+            6.88506668498986e-10,
+            -0.13627629992535215
+          ],
+          [
+            1.3866135111543055e-15,
+            1.981990897827628e-15,
+            -5.551115123125783e-17
+          ]
+        ],
+        "berry_integer_shifts": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "folded_reduced_polarization": [
+          [
+            -3.0220043134576713e-10,
+            5.466004870946506e-09,
+            -0.06651103274465786
+          ],
+          [
+            -2.503815488275052e-10,
+            4.79279893550455e-09,
+            0.06243621304834335
+          ],
+          [
+            -2.0331114569671627e-10,
+            4.1151388963101e-09,
+            0.19291658988892302
+          ],
+          [
+            -1.608901900596038e-10,
+            3.4338978327497216e-09,
+            0.3248436401349939
+          ],
+          [
+            -1.2279155470196201e-10,
+            2.749915628541544e-09,
+            0.4580888332077645
+          ],
+          [
+            -8.846606780466004e-11,
+            2.0639466802307993e-09,
+            -0.4075240096401617
+          ],
+          [
+            -5.718797657650043e-11,
+            1.3766345841048633e-09,
+            -0.27222121601112226
+          ],
+          [
+            -2.8040625377201422e-11,
+            6.885066961004327e-10,
+            -0.13627629992535217
+          ],
+          [
+            1.3322676295501878e-15,
+            1.9984014443252818e-15,
+            -5.551115123125783e-17
+          ]
+        ]
+      },
+      "reflected": {
+        "reached": true,
+        "construction": "reflect_displacements_about_reconstructed_parent",
+        "energies_eV": [
+          -305.6094987444715,
+          -305.6064875558771,
+          -305.59769838836917,
+          -305.583815076394,
+          -305.5658222636526,
+          -305.5448035220347,
+          -305.5217117526854,
+          -305.49715044948016,
+          -305.47119892475126
+        ],
+        "cartesian_polarizations_e_A2": [
+          [
+            8.196708855697258e-18,
+            3.462525383296849e-17,
+            5.923381817221669e-18
+          ],
+          [
+            2.7912439801329624e-13,
+            -1.355694997753599e-11,
+            0.00188104741469477
+          ],
+          [
+            5.692497041759181e-13,
+            -2.710645592751678e-11,
+            0.003757520675886223
+          ],
+          [
+            8.805470369454662e-13,
+            -4.063996947393861e-11,
+            0.005625130599961768
+          ],
+          [
+            1.2222251344108643e-12,
+            -5.4146930670383603e-11,
+            0.00748010182142539
+          ],
+          [
+            1.6014896286312933e-12,
+            -6.761489529279604e-11,
+            0.00931931029778793
+          ],
+          [
+            2.0237335968641587e-12,
+            -8.102881777968084e-11,
+            0.011140324200642749
+          ],
+          [
+            2.4922896121506356e-12,
+            -9.437225328884653e-11,
+            0.0129413693982216
+          ],
+          [
+            3.008027647687501e-12,
+            -1.0762798177082303e-10,
+            0.014721252499419621
+          ]
+        ],
+        "raw_reduced_polarization": [
+          [
+            8.234740617350637e-16,
+            1.7584811397612691e-15,
+            4.2913142475309637e-16
+          ],
+          [
+            2.80419502275723e-11,
+            -6.885044356118208e-10,
+            0.13627629992535512
+          ],
+          [
+            5.718909556161748e-11,
+            -1.3766308181955588e-09,
+            0.2722212160111254
+          ],
+          [
+            8.846326712681276e-11,
+            -2.063945009187185e-09,
+            0.40752400964016694
+          ],
+          [
+            1.2278961147783534e-10,
+            -2.749910710233413e-09,
+            0.5419111667922358
+          ],
+          [
+            1.608920351488325e-10,
+            -3.4338959278936604e-09,
+            0.6751563598650046
+          ],
+          [
+            2.0331234818973908e-10,
+            -4.1151365569788695e-09,
+            0.8070834101110786
+          ],
+          [
+            2.503853541792302e-10,
+            -4.792797428309356e-09,
+            0.9375637869516604
+          ],
+          [
+            3.0219845409427874e-10,
+            -5.4660040029614484e-09,
+            1.06651103274466
+          ]
+        ],
+        "unwrapped_reduced_polarization": [
+          [
+            8.234740617350637e-16,
+            1.7584811397612691e-15,
+            4.2913142475309637e-16
+          ],
+          [
+            2.80419502275723e-11,
+            -6.885044356118208e-10,
+            0.13627629992535512
+          ],
+          [
+            5.718909556161748e-11,
+            -1.3766308181955588e-09,
+            0.2722212160111254
+          ],
+          [
+            8.846326712681276e-11,
+            -2.063945009187185e-09,
+            0.40752400964016694
+          ],
+          [
+            1.2278961147783534e-10,
+            -2.749910710233413e-09,
+            0.5419111667922358
+          ],
+          [
+            1.608920351488325e-10,
+            -3.4338959278936604e-09,
+            0.6751563598650046
+          ],
+          [
+            2.0331234818973908e-10,
+            -4.1151365569788695e-09,
+            0.8070834101110786
+          ],
+          [
+            2.503853541792302e-10,
+            -4.792797428309356e-09,
+            0.9375637869516604
+          ],
+          [
+            3.0219845409427874e-10,
+            -5.4660040029614484e-09,
+            1.06651103274466
+          ]
+        ],
+        "gauge_integer_shift": [
+          0,
+          0,
+          0
+        ],
+        "expected_opposite_endpoint_reduced_polarization": [
+          3.022032187954581e-10,
+          -5.466000888079745e-09,
+          1.0665110327446579
+        ],
+        "actual_opposite_endpoint_branch_residual": 6.110257442294523e-15
+      },
+      "pnp_branch": {
+        "construction": "incoming_path_concatenated_with_parent_reflection",
+        "reduced_polarization": [
+          [
+            -3.022004455684358e-10,
+            5.466004852061541e-09,
+            -1.0665110327446579
+          ],
+          [
+            -2.503815344069168e-10,
+            4.792798958065663e-09,
+            -0.9375637869516567
+          ],
+          [
+            -2.0331115232406725e-10,
+            4.115138845543417e-09,
+            -0.807083410111077
+          ],
+          [
+            -1.608901727382972e-10,
+            3.433897834443697e-09,
+            -0.6751563598650061
+          ],
+          [
+            -1.227915537284069e-10,
+            2.749915652753591e-09,
+            -0.5419111667922355
+          ],
+          [
+            -8.846605929151991e-11,
+            2.0639466661708804e-09,
+            -0.4075240096401617
+          ],
+          [
+            -5.7187986778782655e-11,
+            1.3766345549395235e-09,
+            -0.27222121601112226
+          ],
+          [
+            -2.804062313178309e-11,
+            6.88506668498986e-10,
+            -0.13627629992535215
+          ],
+          [
+            1.3866135111556953e-15,
+            1.9819908978126626e-15,
+            -5.87058403804814e-17
+          ],
+          [
+            2.80419502275723e-11,
+            -6.885044356118208e-10,
+            0.13627629992535512
+          ],
+          [
+            5.718909556161748e-11,
+            -1.3766308181955588e-09,
+            0.2722212160111254
+          ],
+          [
+            8.846326712681276e-11,
+            -2.063945009187185e-09,
+            0.40752400964016694
+          ],
+          [
+            1.2278961147783534e-10,
+            -2.749910710233413e-09,
+            0.5419111667922358
+          ],
+          [
+            1.608920351488325e-10,
+            -3.4338959278936604e-09,
+            0.6751563598650046
+          ],
+          [
+            2.0331234818973908e-10,
+            -4.1151365569788695e-09,
+            0.8070834101110786
+          ],
+          [
+            2.503853541792302e-10,
+            -4.792797428309356e-09,
+            0.9375637869516604
+          ],
+          [
+            3.0219845409427874e-10,
+            -5.4660040029614484e-09,
+            1.06651103274466
+          ]
+        ],
+        "unwrapped_reduced_polarization": [
+          [
+            -3.022004455684358e-10,
+            5.466004852061541e-09,
+            -1.0665110327446579
+          ],
+          [
+            -2.503815344069168e-10,
+            4.792798958065663e-09,
+            -0.9375637869516567
+          ],
+          [
+            -2.0331115232406725e-10,
+            4.115138845543417e-09,
+            -0.807083410111077
+          ],
+          [
+            -1.608901727382972e-10,
+            3.433897834443697e-09,
+            -0.6751563598650061
+          ],
+          [
+            -1.227915537284069e-10,
+            2.749915652753591e-09,
+            -0.5419111667922355
+          ],
+          [
+            -8.846605929151991e-11,
+            2.0639466661708804e-09,
+            -0.4075240096401617
+          ],
+          [
+            -5.7187986778782655e-11,
+            1.3766345549395235e-09,
+            -0.27222121601112226
+          ],
+          [
+            -2.8040623131783092e-11,
+            6.88506668498986e-10,
+            -0.13627629992535215
+          ],
+          [
+            1.3866135111543055e-15,
+            1.981990897827628e-15,
+            -5.551115123125783e-17
+          ],
+          [
+            2.80419502275723e-11,
+            -6.885044356118208e-10,
+            0.13627629992535512
+          ],
+          [
+            5.718909556161748e-11,
+            -1.3766308181955588e-09,
+            0.2722212160111254
+          ],
+          [
+            8.846326712681276e-11,
+            -2.063945009187185e-09,
+            0.40752400964016694
+          ],
+          [
+            1.2278961147783534e-10,
+            -2.749910710233413e-09,
+            0.5419111667922358
+          ],
+          [
+            1.608920351488325e-10,
+            -3.4338959278936604e-09,
+            0.6751563598650046
+          ],
+          [
+            2.0331234818973908e-10,
+            -4.1151365569788695e-09,
+            0.8070834101110786
+          ],
+          [
+            2.503853541792302e-10,
+            -4.792797428309356e-09,
+            0.9375637869516604
+          ],
+          [
+            3.0219845409427874e-10,
+            -5.4660040029614484e-09,
+            1.06651103274466
+          ]
+        ],
+        "berry_integer_shifts": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "folded_reduced_polarization": [
+          [
+            -3.0220043134576713e-10,
+            5.466004870946506e-09,
+            -0.06651103274465786
+          ],
+          [
+            -2.503815488275052e-10,
+            4.79279893550455e-09,
+            0.06243621304834335
+          ],
+          [
+            -2.0331114569671627e-10,
+            4.1151388963101e-09,
+            0.19291658988892302
+          ],
+          [
+            -1.608901900596038e-10,
+            3.4338978327497216e-09,
+            0.3248436401349939
+          ],
+          [
+            -1.2279155470196201e-10,
+            2.749915628541544e-09,
+            0.4580888332077645
+          ],
+          [
+            -8.846606780466004e-11,
+            2.0639466802307993e-09,
+            -0.4075240096401617
+          ],
+          [
+            -5.718797657650043e-11,
+            1.3766345841048633e-09,
+            -0.27222121601112226
+          ],
+          [
+            -2.8040625377201422e-11,
+            6.885066961004327e-10,
+            -0.13627629992535217
+          ],
+          [
+            1.3322676295501878e-15,
+            1.9984014443252818e-15,
+            -5.551115123125783e-17
+          ],
+          [
+            2.804190213367974e-11,
+            -6.885044201432322e-10,
+            0.13627629992535506
+          ],
+          [
+            5.718914231067629e-11,
+            -1.3766308093465796e-09,
+            0.2722212160111255
+          ],
+          [
+            8.846323673594725e-11,
+            -2.0639450148962624e-09,
+            0.4075240096401669
+          ],
+          [
+            1.227895563005177e-10,
+            -2.7499106880490842e-09,
+            -0.45808883320776417
+          ],
+          [
+            1.6089207743874567e-10,
+            -3.4338959453705797e-09,
+            -0.32484364013499545
+          ],
+          [
+            2.0331236694204335e-10,
+            -4.115136564841748e-09,
+            -0.19291658988892135
+          ],
+          [
+            2.5038537909694014e-10,
+            -4.7927974367034665e-09,
+            -0.06243621304833957
+          ],
+          [
+            3.0219848845547403e-10,
+            -5.466003982768086e-09,
+            0.06651103274466008
+          ]
+        ]
+      },
+      "incoming_structure_ids": [
+        "incoming_00_000",
+        "incoming_00_001",
+        "incoming_00_002",
+        "incoming_00_003",
+        "incoming_00_004",
+        "incoming_00_005",
+        "incoming_00_006",
+        "incoming_00_007",
+        "incoming_00_008"
+      ],
+      "reflected_structure_ids": [
+        "reflected_00_001",
+        "reflected_00_002",
+        "reflected_00_003",
+        "reflected_00_004",
+        "reflected_00_005",
+        "reflected_00_006",
+        "reflected_00_007",
+        "reflected_00_008"
+      ],
+      "positive_extension_structure_ids": [
+        "extension_plus_00_000",
+        "extension_plus_00_001",
+        "extension_plus_00_002",
+        "extension_plus_00_003"
+      ],
+      "negative_extension_structure_ids": [
+        "extension_minus_00_000",
+        "extension_minus_00_001",
+        "extension_minus_00_002",
+        "extension_minus_00_003"
+      ],
+      "extension": {
+        "enabled": true,
+        "fraction_beyond_polar_endpoint": 0.35,
+        "images_per_side": 4,
+        "construction": "continue fractional atomic displacements and symmetric log strain beyond +P; reflect these structures about N for the -P side",
+        "positive_path_coordinates": [
+          1.35,
+          1.2625,
+          1.175,
+          1.0875
+        ],
+        "negative_path_coordinates": [
+          -1.0875,
+          -1.175,
+          -1.2625,
+          -1.35
+        ]
+      },
+      "branch_coordinates": [
+        1.35,
+        1.2625,
+        1.175,
+        1.0875,
+        1.0,
+        0.875,
+        0.75,
+        0.625,
+        0.5,
+        0.375,
+        0.25,
+        0.125,
+        0.0,
+        -0.125,
+        -0.25,
+        -0.375,
+        -0.5,
+        -0.625,
+        -0.75,
+        -0.875,
+        -1.0,
+        -1.0875,
+        -1.175,
+        -1.2625,
+        -1.35
+      ],
+      "parent": {
+        "candidate_id": "inversion_parent_endpoint_00",
+        "source": "same_species_inversion_center_projection_from_endpoint",
+        "spacegroup": "Pbam",
+        "spacegroup_number": 55,
+        "pointgroup": "mmm",
+        "has_inversion": true,
+        "is_polar_point_group": false,
+        "nonpolar_parent_hypothesis": true,
+        "symmetry_tolerance_A": null,
+        "target_reduced_polarization": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "formal_class": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "target_residual": 2.6115724273721764e-15,
+        "parent_symmetrization_rmsd_A": 0.08959236321924093,
+        "parent_cell_rmsd_A": 0.0,
+        "energy_eV": -305.60949874447147,
+        "reduced_polarization": [
+          -2.27315009142182e-15,
+          1.024211516383796e-15,
+          -7.772322529246834e-16
+        ],
+        "cartesian_polarization_e_A2": [
+          -2.2626516547986727e-17,
+          2.0167167524044654e-17,
+          -1.0728283060093197e-17
+        ],
+        "ranking_score": 0.08959236321924614
+      }
+    }
+  ],
+  "path_sampling": {
+    "num_images": 17,
+    "images_per_leg_including_parent": 9,
+    "extension_fraction_beyond_polar_endpoint": 0.35,
+    "extension_images_per_side": 4,
+    "total_images_per_sampled_branch": 25,
+    "construction": "linear polar-to-parent interpolation plus parent-reflected second leg and symmetric log-strain continuation beyond both polar endpoints"
+  },
+  "branch_folding": "componentwise integer unwrap with per-image shifts, then reduced-coordinate fold [-0.5, 0.5)",
+  "bec_backprojection_settings": {
+    "variable_cell": true,
+    "max_strain_step_log_component": 0.02,
+    "strain_response_refresh_iterations": 4,
+    "cell_principal_stretch_bounds": [
+      0.85,
+      1.15
+    ],
+    "cell_volume_ratio_bounds": [
+      0.7,
+      1.3
+    ],
+    "strain_jacobian": "branch-matched finite differences of reduced polarization in six symmetric log-strain coordinates at fixed fractional positions"
+  },
+  "model_input_contract": "one polar endpoint structure; no reference parent or path frame",
+  "run": {
+    "model_file": "MACEField-MH-0-omat-dielectric.model",
+    "model_sha256": "f92e043aaf2cd8879919db8452503553fe7b608cb749d8d169dd96d4aa094aa2",
+    "model_head": "mp-ferroelectric",
+    "device": "cpu",
+    "dtype": "float64",
+    "num_images": 17,
+    "compute_becs_for_every_image": true,
+    "compute_polarizability_for_every_image": true,
+    "initial_structure_relaxation": {
+      "enabled": false
+    },
+    "model_evaluations_for_recovery": {
+      "total": 52,
+      "full_response": 16,
+      "energy_polarization": 36
+    },
+    "model_evaluations_for_recovery_and_path_properties": {
+      "total": 77,
+      "full_response": 41,
+      "energy_polarization": 36
+    },
+    "elapsed_seconds": 738.7121169120073
+  }
+}
