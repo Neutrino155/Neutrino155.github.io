@@ -3,7 +3,10 @@
 <title>MP Ferroelectrics · FerroFinder Explorer</title>
 <style>body{font:15px system-ui,sans-serif;margin:2rem auto;max-width:1600px;padding:0 1rem;color:#193346}h1{margin-bottom:.3rem}.muted{color:#627989}.summary{padding:1rem;background:#eff5f7;border-radius:8px;margin:1rem 0}input{padding:.6rem;width:min(100%,32rem);border:1px solid #9badb8;border-radius:5px}.table-wrap{overflow-x:auto;margin-top:1rem}table{border-collapse:collapse;min-width:1640px;width:100%}th,td{border-bottom:1px solid #d7e0e5;padding:.5rem;text-align:left;vertical-align:top;white-space:nowrap}th{background:#f4f7f8;position:sticky;top:0}.sort-button{width:100%;display:flex;justify-content:space-between;gap:8px;align-items:center;padding:.45rem .3rem;border:0;background:transparent;color:#27495d;font:inherit;font-weight:700;cursor:pointer;text-align:left}.sort-button span{color:#718391;font-size:12px}th[aria-sort=ascending] .sort-button span,th[aria-sort=descending] .sort-button span{color:#126e75}a{color:#126e75}</style>
 <style>
-.results-layout{display:grid;grid-template-columns:minmax(0,2fr) minmax(320px,1fr);gap:16px;align-items:start;margin-top:12px}.table-column{min-width:0}.table-column>label{display:block;margin-bottom:8px}.table-column input{width:100%;max-width:100%}.table-scroll-control{position:sticky;top:0;z-index:8;display:flex;align-items:center;gap:7px;padding:4px 7px;background:#f4f7f8;border:1px solid #cbd8e0;border-radius:6px;color:#40596b;font-size:12px}.table-scroll-control button{width:30px;height:25px;border:1px solid #cbd8e0;border-radius:4px;background:white;color:#27495d;cursor:pointer;font-size:16px;line-height:1}.table-scroll-control input[type=range]{flex:1;min-width:60px;width:auto;max-width:none;height:24px;padding:0;border:0;background:transparent;accent-color:#126e75;cursor:ew-resize}.table-wrap{overflow-x:auto;margin-top:0}.table-wrap table{margin-top:0}.table-wrap tbody tr{cursor:pointer}.table-wrap tbody tr:hover td{background:#f1f8fa}.table-wrap tbody tr.preview-selected td{background:#e5f2f2}.branch-cell{font-weight:700}.preview-panel{position:sticky;top:52px;min-width:0;padding:12px;border:1px solid #d7e0e5;border-radius:8px;background:#f8fafb}.preview-panel h2{margin:0 0 4px;font-size:16px;color:#27495d}.preview-name{margin:0 0 10px;color:#647989;font-size:12px}.preview-chart-block{margin:12px 0}.preview-chart-block h3{margin:0 0 4px;font-size:12px;color:#40596b}.preview-chart{display:block;width:100%;height:170px;border:1px solid #e0e7eb;border-radius:5px;background:white}.preview-meta{display:flex;flex-wrap:wrap;gap:6px;margin:7px 0 10px}.preview-meta span{padding:4px 7px;border-radius:4px;background:#e8f0f3;color:#425b6b;font-size:11px}.preview-open{display:inline-block;padding:7px 10px;border-radius:5px;background:#176d70;color:white;text-decoration:none;font-size:12px;font-weight:700}.preview-empty{color:#687f8e;font-size:12px}@media(max-width:1120px){.results-layout{grid-template-columns:minmax(0,1fr)}.preview-panel{position:static;display:grid;grid-template-columns:1fr 1fr;gap:8px 14px}.preview-panel>header,.preview-meta,.preview-open,.preview-empty{grid-column:1/-1}.preview-chart-block{margin:4px 0}}@media(max-width:650px){body{margin:1rem auto;padding:0 .5rem}.preview-panel{display:block}.preview-chart{height:155px}.table-scroll-control>span{display:none}}
+.results-layout{display:grid;grid-template-columns:minmax(0,2fr) minmax(320px,1fr);gap:16px;align-items:start;margin-top:12px}.table-column{min-width:0}.table-column>label{display:block;margin-bottom:8px}.table-column input{width:100%;max-width:100%}.table-scroll-control{position:sticky;top:0;z-index:8;display:flex;align-items:center;gap:7px;padding:4px 7px;background:#f4f7f8;border:1px solid #cbd8e0;border-radius:6px;color:#40596b;font-size:12px}.table-scroll-control button{width:30px;height:25px;border:1px solid #cbd8e0;border-radius:4px;background:white;color:#27495d;cursor:pointer;font-size:16px;line-height:1}.table-scroll-control input[type=range]{flex:1;min-width:60px;width:auto;max-width:none;height:24px;padding:0;border:0;background:transparent;accent-color:#126e75;cursor:ew-resize}.table-wrap{overflow-x:auto;margin-top:0}.table-wrap table{margin-top:0}.table-wrap tbody tr{cursor:pointer}.table-wrap tbody tr:hover td{background:#f1f8fa}.table-wrap tbody tr.preview-selected td{background:#e5f2f2}.branch-cell{font-weight:700}.preview-panel{position:sticky;top:52px;min-width:0;padding:12px;border:1px solid #d7e0e5;border-radius:8px;background:#f8fafb}.preview-panel h2{margin:0 0 4px;font-size:16px;color:#27495d}.preview-name{margin:0 0 10px;color:#647989;font-size:12px}.preview-chart-block{margin:12px 0}.preview-chart-block h3{margin:0 0 4px;font-size:12px;color:#40596b}.preview-chart{display:block;width:100%;height:170px;border:1px solid #e0e7eb;border-radius:5px;background:white}.preview-meta{display:flex;flex-wrap:wrap;gap:6px;margin:7px 0 10px}.preview-meta span{padding:4px 7px;border-radius:4px;background:#e8f0f3;color:#425b6b;font-size:11px}.preview-open{display:inline-block;padding:7px 10px;border-radius:5px;background:#176d70;color:white;text-decoration:none;font-size:12px;font-weight:700}.preview-empty{color:#687f8e;font-size:12px}@media(max-width:1120px){.results-layout{grid-template-columns:minmax(0,1fr)}.preview-panel{position:static;display:grid;grid-template-columns:1fr 1fr;gap:8px 14px}.preview-panel>header,.preview-meta,.preview-open,.preview-empty{grid-column:1/-1}.preview-chart-block{margin:4px 0}}@media(max-width:1120px){.preview-detail-row{cursor:default}.preview-detail-row>td{padding:8px!important;white-space:normal;background:#f8fafb;animation:preview-fold-in .18s ease-out;transform-origin:top}.preview-detail-row:hover>td{background:#f8fafb}.preview-detail-row .preview-panel{position:sticky;top:auto;left:8px;width:calc(100vw - 48px);max-width:760px;box-sizing:border-box;margin:2px 0}}
+@keyframes preview-fold-in{from{opacity:0;transform:scaleY(.96)}to{opacity:1;transform:scaleY(1)}}
+@media(prefers-reduced-motion:reduce){.preview-detail-row>td{animation:none}}
+@media(max-width:650px){body{margin:1rem auto;padding:0 .5rem}.preview-panel{display:block}.preview-chart{height:155px}.table-scroll-control>span{display:none}}
 </style>
 <h1>MP Ferroelectrics · discovery gallery</h1>
 <p class="muted">Joint exploration of 249 MP-Ferroelectric and 516 MP-Ferroelectric-Ext polar endpoints. The requested 108-atom query_0421.cif was omitted. 1 input(s) were skipped: mp-ferroelectric/query_0223.extxyz. Branches show model-inferred parent paths with a bounded geometric continuation beyond both polar states; these are sampled structures, not relaxed switching barriers.</p>
@@ -37,8 +40,31 @@ window.addEventListener('resize', syncScrollWidth);
 syncScrollWidth();
 const previewEnergy = document.getElementById('preview-energy');
 const previewPolarization = document.getElementById('preview-polarization');
+const resultsLayout = document.querySelector('.results-layout');
+const previewPanel = document.querySelector('.preview-panel');
+const mobilePreviewQuery = window.matchMedia('(max-width: 1120px)');
+const previewDetailRow = document.createElement('tr');
+previewDetailRow.className = 'preview-detail-row';
+const previewDetailCell = document.createElement('td');
+previewDetailCell.colSpan = table.querySelectorAll('thead th').length;
+previewDetailRow.append(previewDetailCell);
 let previewRow = null;
 let previewRequest = 0;
+function placePreviewPanel(row) {
+  if (mobilePreviewQuery.matches && row && !row.hidden) {
+    previewPanel.hidden = false;
+    previewDetailCell.replaceChildren(previewPanel);
+    row.after(previewDetailRow);
+  } else {
+    previewDetailRow.remove();
+    resultsLayout.append(previewPanel);
+    previewPanel.hidden = !row;
+  }
+}
+mobilePreviewQuery.addEventListener('change', () => {
+  if (previewRow && !previewRow.hidden) selectPreview(previewRow);
+  else placePreviewPanel(null);
+});
 function drawPreviewChart(canvas, title, series, yUnit, digits, coordinates) {
   const bounds = canvas.getBoundingClientRect();
   if (bounds.width < 10 || !series.some(item => item.values.length)) return;
@@ -80,6 +106,7 @@ async function selectPreview(row) {
   previewRow = row; previewRequest += 1; const request = previewRequest;
   body.querySelectorAll('tr.preview-selected').forEach(item => item.classList.remove('preview-selected'));
   row.classList.add('preview-selected');
+  placePreviewPanel(row);
   document.getElementById('preview-title').textContent = 'Loading branch…';
   try {
     const response = await fetch(payloadPath); if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -120,7 +147,9 @@ document.querySelectorAll('.sort-button').forEach((button, column) => button.add
   const numeric = button.dataset.sortType === 'number';
   const switching = button.dataset.sortType === 'switching';
   const switchingRank = {positive: 0, unclear: 1, negative: 2};
-  const rows = Array.from(body.rows);
+  const inlinePreviewVisible = mobilePreviewQuery.matches && previewRow && !previewRow.hidden;
+  previewDetailRow.remove();
+  const rows = Array.from(body.querySelectorAll('tr[data-preview-payload]'));
   rows.sort((left, right) => {
     const a = left.cells[column].dataset.sortValue || '';
     const b = right.cells[column].dataset.sortValue || '';
@@ -137,8 +166,9 @@ document.querySelectorAll('.sort-button').forEach((button, column) => button.add
     return (ascending ? order : -order) || Number(left.dataset.originalIndex) - Number(right.dataset.originalIndex);
   });
   rows.forEach(row => body.append(row));
+  if (inlinePreviewVisible) previewRow.after(previewDetailRow);
 }));
-document.getElementById('filter').addEventListener('input',event=>{const q=event.target.value.toLowerCase();document.querySelectorAll('tbody tr').forEach(row=>row.hidden=!row.textContent.toLowerCase().includes(q));if(previewRow?.hidden){const next=[...body.querySelectorAll('tr')].find(row=>!row.hidden&&row.dataset.previewPayload);if(next)selectPreview(next);}});
+document.getElementById('filter').addEventListener('input',event=>{const q=event.target.value.toLowerCase();const rows=[...body.querySelectorAll('tr[data-preview-payload]')];rows.forEach(row=>row.hidden=!row.textContent.toLowerCase().includes(q));if(!previewRow||previewRow.hidden){const next=rows.find(row=>!row.hidden);if(next)selectPreview(next);else{previewRow=null;placePreviewPanel(null);}}});
 const firstPreviewRow = body.querySelector('tr[data-preview-payload]'); if (firstPreviewRow) selectPreview(firstPreviewRow);
 </script>
 </html>
