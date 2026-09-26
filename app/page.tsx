@@ -197,7 +197,11 @@ export default function Home() {
     <main>
       <header className="site-header" aria-label="Site header">
         <a className="wordmark" href="#top" aria-label="Bradley Martin home">
-          <span className="atom-mark" aria-hidden="true" />
+          <svg className="atom-mark" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" />
+            <ellipse cx="12" cy="12" rx="10.5" ry="3.4" className="atom-orbit-rose" transform="rotate(58 12 12)" />
+            <ellipse cx="12" cy="12" rx="10.5" ry="3.4" className="atom-orbit-sage" transform="rotate(-58 12 12)" />
+          </svg>
           Bradley Martin
         </a>
         <nav aria-label="Primary navigation">

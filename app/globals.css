@@ -83,34 +83,30 @@ main {
 }
 
 .atom-mark {
-  border: 1.7px solid var(--accent);
-  border-radius: 999px;
-  display: inline-block;
-  flex: 0 0 18px;
-  height: 18px;
-  position: relative;
-  width: 18px;
+  display: block;
+  flex: 0 0 22px;
+  height: 22px;
+  overflow: visible;
+  width: 22px;
 }
 
-.atom-mark::before,
-.atom-mark::after {
-  border: 1.3px solid var(--rose);
-  border-radius: 999px;
-  content: "";
-  height: 7px;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  width: 18px;
+.atom-mark circle {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 1.8;
 }
 
-.atom-mark::before {
-  transform: translate(-50%, -50%) rotate(58deg);
+.atom-mark ellipse {
+  fill: none;
+  stroke-width: 1.45;
 }
 
-.atom-mark::after {
-  border-color: var(--sage);
-  transform: translate(-50%, -50%) rotate(-58deg);
+.atom-mark .atom-orbit-rose {
+  stroke: var(--rose);
+}
+
+.atom-mark .atom-orbit-sage {
+  stroke: var(--sage);
 }
 
 nav {
