@@ -98,19 +98,19 @@ main {
   border-radius: 999px;
   content: "";
   height: 7px;
-  left: 0;
+  left: 50%;
   position: absolute;
-  top: 5.5px;
+  top: 50%;
   width: 18px;
 }
 
 .atom-mark::before {
-  transform: rotate(58deg);
+  transform: translate(-50%, -50%) rotate(58deg);
 }
 
 .atom-mark::after {
   border-color: var(--sage);
-  transform: rotate(-58deg);
+  transform: translate(-50%, -50%) rotate(-58deg);
 }
 
 nav {

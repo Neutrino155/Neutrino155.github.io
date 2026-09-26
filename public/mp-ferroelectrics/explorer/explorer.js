@@ -1244,13 +1244,12 @@ function setStructureView(view) {
   document.querySelectorAll("[data-structure-view]").forEach((button) => {
     button.setAttribute("aria-pressed", String(button.dataset.structureView === view));
   });
-  $("structure-hint").textContent = `${descriptions[view]} · scroll, pinch, or use +/− to zoom · click an atom for its Born charge.`;
+  $("structure-hint").textContent = `${descriptions[view]} · pinch to zoom · click an atom for its Born charge.`;
   drawStructure();
 }
 
 function setZoom(value, redraw = true) {
   zoom = Math.max(0.55, Math.min(2.6, value));
-  $("zoom-value").textContent = `${Math.round(zoom * 100)}%`;
   if (redraw) drawStructure();
 }
 
@@ -1412,7 +1411,7 @@ async function loadQuery(id) {
   params.set("query", id);
   history.replaceState(null, "", `${location.pathname}?${params.toString()}`);
   setSummary();
-  $("structure-hint").textContent = "Drag to rotate · Shift-drag to pan · scroll, pinch, or use +/− to zoom · click an atom for its Born charge.";
+  $("structure-hint").textContent = "Drag to rotate · Shift-drag to pan · pinch to zoom · click an atom for its Born charge.";
   draw();
 }
 
@@ -1459,9 +1458,6 @@ $("atom-size").addEventListener("input", (event) => {
   $("atom-size-value").textContent = `${Number(event.target.value).toFixed(2)}×`;
   drawStructure();
 });
-$("zoom-out").addEventListener("click", () => setZoom(zoom / 1.2));
-$("zoom-in").addEventListener("click", () => setZoom(zoom * 1.2));
-$("zoom-reset").addEventListener("click", () => setZoom(1));
 $("play").addEventListener("click", () => {
   if (playing) {
     clearInterval(playing);
@@ -1543,7 +1539,6 @@ structureCanvas.addEventListener("pointermove", (event) => {
     zoom = Math.max(0.55, Math.min(2.6, pinch.zoom * distance / pinch.distance));
     pan.x = pinch.pan.x + center.x - pinch.center.x;
     pan.y = pinch.pan.y + center.y - pinch.center.y;
-    $("zoom-value").textContent = `${Math.round(zoom * 100)}%`;
     drawStructure();
     return;
   }
