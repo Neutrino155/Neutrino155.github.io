@@ -1412,7 +1412,9 @@ async function load() {
     selector.replaceChildren(...manifest.queries.map((item) => {
       const option = document.createElement("option");
       option.value = item.query_id;
-      option.textContent = `${item.name || item.query_id} · ${item.formula || ""}`;
+      const source = item.name?.split("/", 1)[0] || "mp-ferroelectric";
+      const collection = source === "mp-ferroelectric-ext" ? "ferroelectric-ext" : "ferroelectric";
+      option.textContent = `${item.formula || ""} · ${collection}`;
       return option;
     }));
     selector.addEventListener("change", () => {
